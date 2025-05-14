@@ -27,7 +27,7 @@ export default function MobileNav({ treatments, specialties }: MobileNavProps) {
         className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ top: '122px' }}  {/* Adjusted for top contact bar */}
+        style={{ top: '122px' }}  /* Adjusted for top contact bar */
       >
         <div className="px-4 py-6 space-y-4 h-full overflow-y-auto">
           <Link 
