@@ -60,9 +60,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="h-12 md:h-14 w-auto font-playfair text-qegold font-bold text-2xl md:text-3xl">
-              QE<span className="text-qegold-dark text-3xl md:text-4xl">+</span>
-            </div>
+            <img 
+              src="/lovable-uploads/14637407-75fb-4473-818c-bc455a63bd6b.png" 
+              alt="Instituto QE+" 
+              className="h-12 md:h-14 w-auto" 
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -265,3 +267,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
