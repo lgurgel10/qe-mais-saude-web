@@ -33,10 +33,10 @@ export default function HeroSection() {
   }, [images.length]);
 
   return (
-    <section className="w-full relative bg-white">
+    <section className="w-full relative bg-white pt-16"> {/* Adicionado pt-16 para compensar a altura da navbar */}
       <Separator className="w-full bg-border" />
       
-      {/* Slider container with fixed height */}
+      {/* Slider container com altura fixa */}
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
         {/* Image slides */}
         {images.map((image, index) => (
@@ -54,7 +54,7 @@ export default function HeroSection() {
           />
         ))}
         
-        {/* Content overlay - centered */}
+        {/* Content overlay - centralizado */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
