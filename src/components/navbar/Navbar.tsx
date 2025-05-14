@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -44,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/14637407-75fb-4473-818c-bc455a63bd6b.png" 
+              src="/images/Logo-Menu.png" 
               alt="Instituto QE+" 
               className="h-12 md:h-14 w-auto" 
             />
