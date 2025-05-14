@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+
+import { useState, useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -25,7 +25,6 @@ export default function HeroSection() {
   const images = isMobile ? mobileImages : desktopImages;
 
   useEffect(() => {
-    // Set interval to 2 seconds instead of 5
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     }, 2000);
@@ -36,8 +35,10 @@ export default function HeroSection() {
   return (
     <>
       <Separator className="w-full bg-border" />
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-qebeige-light to-white overflow-hidden min-h-[500px] md:min-h-[600px]">
-        <div className="absolute inset-0 z-0">
+      <section className="relative overflow-hidden bg-white">
+        {/* Slider container with fixed height */}
+        <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+          {/* Image slides */}
           {images.map((image, index) => (
             <div
               key={index}
@@ -48,30 +49,31 @@ export default function HeroSection() {
                 backgroundImage: `url(${image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                opacity: 0.64, // Set opacity to 0.64 as requested
+                opacity: 0.64, // Set opacity to exactly 0.64 as requested
               }}
             />
           ))}
-        </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col items-center justify-center">
-          <div className="text-center max-w-2xl mx-auto space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
-              <span className="text-white">Instituto</span> 
-              <span className="text-qegold"> QE+</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl font-playfair text-white">
-              Centro de excelência em saúde mental e desenvolvimento humano
-            </p>
-            
-            <p className="text-white">
-              Somos especializados no tratamento de transtornos como ansiedade, depressão, TDAH, TOD, TEA, entre outros. Nossa infraestrutura de qualidade está pronta para ajudar você a melhorar sua qualidade de vida.
-            </p>
+          
+          {/* Content overlay - centered */}
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
+                <span className="text-white">Instituto</span> 
+                <span className="text-qegold"> QE+</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl font-playfair text-white">
+                Centro de excelência em saúde mental e desenvolvimento humano
+              </p>
+              
+              <p className="text-white">
+                Somos especializados no tratamento de transtornos como ansiedade, depressão, TDAH, TOD, TEA, entre outros. Nossa infraestrutura de qualidade está pronta para ajudar você a melhorar sua qualidade de vida.
+              </p>
+            </div>
           </div>
         </div>
         
-        {/* Dots navigation - keeping this for user to navigate visually */}
+        {/* Navigation dots */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-20">
           {images.map((_, index) => (
             <button
@@ -84,8 +86,6 @@ export default function HeroSection() {
             />
           ))}
         </div>
-        
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
     </>
   );
