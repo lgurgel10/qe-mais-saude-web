@@ -42,7 +42,7 @@ export default function AboutSection() {
             <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
               <AspectRatio ratio={16/9} className="bg-muted">
                 <img 
-                  src="/lovable-uploads/ec39c136-dd06-4ebd-976f-917b235333c1.png" 
+                  src="/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png" 
                   alt="Ansiedade - Tratamento para transtornos de ansiedade" 
                   className="object-cover w-full h-full"
                 />
