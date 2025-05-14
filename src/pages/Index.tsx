@@ -20,7 +20,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <header className="w-full">
+        <Navbar />
+      </header>
       
       <main className="flex-grow">
         <HeroSection />

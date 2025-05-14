@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -53,7 +52,7 @@ export default function Navbar() {
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
           ? "bg-white shadow-md py-2" 
-          : "bg-transparent py-4"
+          : "bg-white py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -267,4 +266,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

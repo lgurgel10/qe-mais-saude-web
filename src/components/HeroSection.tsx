@@ -33,60 +33,59 @@ export default function HeroSection() {
   }, [images.length]);
 
   return (
-    <>
+    <section className="w-full relative bg-white">
       <Separator className="w-full bg-border" />
-      <section className="relative overflow-hidden bg-white">
-        {/* Slider container with fixed height */}
-        <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
-          {/* Image slides */}
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                opacity: 0.64, // Set opacity to exactly 0.64 as requested
-              }}
-            />
-          ))}
-          
-          {/* Content overlay - centered */}
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
-                <span className="text-white">Instituto</span> 
-                <span className="text-qegold"> QE+</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl font-playfair text-white">
-                Centro de excelência em saúde mental e desenvolvimento humano
-              </p>
-              
-              <p className="text-white">
-                Somos especializados no tratamento de transtornos como ansiedade, depressão, TDAH, TOD, TEA, entre outros. Nossa infraestrutura de qualidade está pronta para ajudar você a melhorar sua qualidade de vida.
-              </p>
-            </div>
+      
+      {/* Slider container with fixed height */}
+      <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+        {/* Image slides */}
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: 0.64,
+            }}
+          />
+        ))}
+        
+        {/* Content overlay - centered */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
+              <span className="text-white">Instituto</span> 
+              <span className="text-qegold"> QE+</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl font-playfair text-white">
+              Centro de excelência em saúde mental e desenvolvimento humano
+            </p>
+            
+            <p className="text-white">
+              Somos especializados no tratamento de transtornos como ansiedade, depressão, TDAH, TOD, TEA, entre outros. Nossa infraestrutura de qualidade está pronta para ajudar você a melhorar sua qualidade de vida.
+            </p>
           </div>
         </div>
-        
-        {/* Navigation dots */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-20">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full ${
-                index === currentSlide ? "bg-qegold" : "bg-white/50"
-              }`}
-              aria-label={`Ir para slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
-    </>
+      </div>
+      
+      {/* Navigation dots */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-20">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full ${
+              index === currentSlide ? "bg-qegold" : "bg-white/50"
+            }`}
+            aria-label={`Ir para slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
