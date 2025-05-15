@@ -48,6 +48,24 @@ const specialties: Specialty[] = [
     description: "A base de suas ações compreende abordagens e/ou condutas fundamentadas em critérios avaliativos com a análise pessoal, familiar, coletivo e social",
     image: "/lovable-uploads/ed663827-4eb7-4797-a901-3c242f1f994d.png"
   },
+  {
+    id: 7,
+    title: "Terapia ABA",
+    description: "Análise do Comportamento Aplicada é uma terapia baseada em evidências que ajuda a desenvolver habilidades sociais, comunicativas e adaptativas, especialmente para pessoas com TEA.",
+    image: "/lovable-uploads/770364f2-963d-4af9-93d4-7212813b8a8a.png"
+  },
+  {
+    id: 8,
+    title: "Psicanálise",
+    description: "Abordagem terapêutica que explora o inconsciente para compreender comportamentos e emoções, promovendo autoconhecimento e bem-estar psíquico.",
+    image: "/lovable-uploads/18c840fa-1072-497a-96db-9b81c39f5cd9.png"
+  },
+  {
+    id: 9,
+    title: "Psiquiatria",
+    description: "Especialidade médica focada no diagnóstico, tratamento e prevenção de transtornos mentais, oferecendo suporte multidisciplinar para a saúde emocional.",
+    image: "/lovable-uploads/768f3959-3f22-4e4a-90c9-44f8eb65f29a.png"
+  },
 ];
 
 const SpecialtiesSection = () => {
@@ -59,7 +77,7 @@ const SpecialtiesSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-playfair text-gray-800">
-            <span className="text-qegold">Especialidades</span>
+            Especialidades
           </h2>
           <div className="w-24 h-1 bg-qegold mx-auto mt-4 mb-2"></div>
           <p className="text-gray-700 max-w-3xl mx-auto mt-6 text-base md:text-lg">
@@ -109,7 +127,7 @@ const SpecialtiesSection = () => {
               className="bg-qegold hover:bg-qegold-dark text-white px-8 py-6 h-auto text-base font-medium"
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll ? "MOSTRAR MENOS" : "VER TODAS"}
+              {showAll ? "MOSTRAR MENOS" : "VER MAIS"}
             </Button>
           </div>
         )}
