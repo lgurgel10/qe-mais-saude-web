@@ -25,25 +25,25 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* TDAH Card */}
           <Card className="overflow-hidden border-none shadow-md group">
-            <div className="relative h-64">
-              <AspectRatio ratio={16/10} className="bg-muted">
-                <div className="absolute inset-0 bg-gradient-to-b from-qegold/40 to-qegold/90 z-10"></div>
+            <div className="relative">
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <div className="absolute inset-0 bg-gradient-to-b from-qegold/10 to-qegold z-10"></div>
                 <img 
                   src="/lovable-uploads/c6271fd6-16cc-412f-8baf-72f25de71dec.png" 
                   alt="TDAH - Tratamento para déficit de atenção e hiperatividade" 
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 z-20 flex flex-col justify-between p-6 text-white">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold font-playfair">TDAH</h3>
-                    <Brain className="w-8 h-8" />
+                <div className="absolute inset-0 z-20 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-2">
+                    <h3 className="text-2xl font-bold font-playfair mb-2">TDAH</h3>
+                    <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
                   </div>
-                  <div className="space-y-4">
-                    <p className="text-sm md:text-base leading-relaxed">
-                      É uma condição neurológica onde o indivíduo possui dificuldade de atenção, 
-                      hiperatividade e impulsividade. Os sintomas geralmente são identificados na 
-                      infância e permanecem até a vida adulta.
-                    </p>
+                  <p className="text-sm md:text-base text-center mb-6">
+                    É uma condição neurológica onde o indivíduo possui dificuldade de atenção, 
+                    hiperatividade e impulsividade. Os sintomas geralmente são identificados na 
+                    infância e permanecem até a vida adulta.
+                  </p>
+                  <div className="text-center">
                     <Button 
                       asChild 
                       variant="outline" 
@@ -59,24 +59,24 @@ export default function AboutSection() {
 
           {/* Ansiedade Card */}
           <Card className="overflow-hidden border-none shadow-md group">
-            <div className="relative h-64">
-              <AspectRatio ratio={16/10} className="bg-muted">
-                <div className="absolute inset-0 bg-gradient-to-b from-qegold/40 to-qegold/90 z-10"></div>
+            <div className="relative">
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <div className="absolute inset-0 bg-gradient-to-b from-qegold/10 to-qegold z-10"></div>
                 <img 
                   src="/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png" 
                   alt="Ansiedade - Tratamento para transtornos de ansiedade" 
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 z-20 flex flex-col justify-between p-6 text-white">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold font-playfair">Ansiedade</h3>
-                    <HeartPulse className="w-8 h-8" />
+                <div className="absolute inset-0 z-20 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-2">
+                    <h3 className="text-2xl font-bold font-playfair mb-2">Ansiedade</h3>
+                    <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
                   </div>
-                  <div className="space-y-4">
-                    <p className="text-sm md:text-base leading-relaxed">
-                      A ansiedade pode ser provocada por qualquer motivo, mas depende da importância que o indivíduo 
-                      dá a uma determinada situação e pode surgir em adultos ou crianças.
-                    </p>
+                  <p className="text-sm md:text-base text-center mb-6">
+                    A ansiedade pode ser provocada por qualquer motivo, mas depende da importância que o indivíduo 
+                    dá a uma determinada situação e pode surgir em adultos ou crianças.
+                  </p>
+                  <div className="text-center">
                     <Button 
                       asChild 
                       variant="outline" 
@@ -92,24 +92,24 @@ export default function AboutSection() {
 
           {/* Neuromodulação Card */}
           <Card className="overflow-hidden border-none shadow-md group">
-            <div className="relative h-64">
-              <AspectRatio ratio={16/10} className="bg-muted">
-                <div className="absolute inset-0 bg-gradient-to-b from-qegold/40 to-qegold/90 z-10"></div>
+            <div className="relative">
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <div className="absolute inset-0 bg-gradient-to-b from-qegold/10 to-qegold z-10"></div>
                 <img 
                   src="/lovable-uploads/fb6e7c8f-4db4-484a-be07-e3e3c60645ea.png" 
                   alt="Neuromodulação - Tratamentos avançados para o cérebro" 
                   className="object-cover w-full h-full"
                 />
-                <div className="absolute inset-0 z-20 flex flex-col justify-between p-6 text-white">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold font-playfair">Neuromodulação</h3>
-                    <BrainCircuit className="w-8 h-8" />
+                <div className="absolute inset-0 z-20 flex flex-col justify-center p-6 text-white">
+                  <div className="text-center mb-2">
+                    <h3 className="text-2xl font-bold font-playfair mb-2">Neuromodulação</h3>
+                    <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
                   </div>
-                  <div className="space-y-4">
-                    <p className="text-sm md:text-base leading-relaxed">
-                      Técnicas avançadas de estimulação cerebral não-invasiva para 
-                      otimização da função neurológica e tratamento de diversos transtornos.
-                    </p>
+                  <p className="text-sm md:text-base text-center mb-6">
+                    Técnicas avançadas de estimulação cerebral não-invasiva para 
+                    otimização da função neurológica e tratamento de diversos transtornos.
+                  </p>
+                  <div className="text-center">
                     <Button 
                       asChild 
                       variant="outline" 
