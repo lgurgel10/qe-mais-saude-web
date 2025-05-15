@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from "react-router-dom";
 
 type Specialty = {
   id: number;
@@ -100,7 +101,7 @@ const SpecialtiesSection = () => {
                 </AspectRatio>
               </div>
               <CardHeader className="pb-2 pt-4">
-                <h3 className="text-xl md:text-2xl font-playfair text-qegold text-center">
+                <h3 className="text-xl md:text-2xl font-playfair text-qegold text-center font-bold">
                   {specialty.title}
                 </h3>
               </CardHeader>
@@ -109,10 +110,13 @@ const SpecialtiesSection = () => {
               </CardContent>
               <CardFooter className="flex justify-center pb-6 pt-2">
                 <Button 
+                  asChild
                   variant="outline" 
                   className="border-qegold text-qegold hover:bg-qegold hover:text-white transition-colors duration-300"
                 >
-                  SAIBA MAIS
+                  <Link to={`/especialidades/${specialty.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`}>
+                    SAIBA MAIS
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

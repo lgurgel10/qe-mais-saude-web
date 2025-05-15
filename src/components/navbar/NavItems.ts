@@ -1,4 +1,3 @@
-
 export const NAV_ITEMS = {
   treatments: [
     "Ansiedade",
@@ -14,6 +13,7 @@ export const NAV_ITEMS = {
     "Neuromodulação"
   ],
   specialties: [
+    "Psicologia",
     "Fonoaudiologia",
     "Psicanálise",
     "Psiquiatria",

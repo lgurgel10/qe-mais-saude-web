@@ -1,4 +1,3 @@
-
 export type SpecialtyData = {
   title: string;
   description: string;
@@ -7,6 +6,16 @@ export type SpecialtyData = {
 };
 
 const specialtyData: Record<string, SpecialtyData> = {
+  "psicologia": {
+    title: "Psicologia",
+    description: "No Instituto QE+ os psicólogos exploram conceitos como percepção, cognição, atenção, emoção, inteligência, entre outras.",
+    fullDescription: `A Psicologia no Instituto QE+ oferece um atendimento especializado e humanizado, focando no bem-estar emocional e desenvolvimento pessoal de nossos pacientes.
+
+Nossos psicólogos são altamente qualificados e trabalham com diversas abordagens terapêuticas, adaptando o tratamento às necessidades específicas de cada pessoa. Atendemos crianças, adolescentes, adultos e idosos, oferecendo suporte para uma ampla gama de questões emocionais e comportamentais.
+
+Nossa abordagem integra diferentes técnicas e metodologias, incluindo terapia cognitivo-comportamental, psicanálise, terapia humanista e outras abordagens baseadas em evidências científicas. Trabalhamos em conjunto com outras especialidades do instituto para oferecer um tratamento multidisciplinar completo.`,
+    image: "/lovable-uploads/7ef31662-90db-4ffc-8504-8211d10ca738.png"
+  },
   "fonoaudiologia": {
     title: "Fonoaudiologia",
     description: "Em nosso Instituto ele atua em modelo ambulatorial atendendo as diversas demandas tanto com o público infantil quanto nos adultos.",

@@ -110,7 +110,7 @@ export default function AboutSection() {
                       size={isMobile ? "sm" : "default"}
                       className="bg-white text-qegold hover:bg-qebeige hover:text-qegold-dark border-white font-medium transition-all duration-300 mt-12"
                     >
-                      <Link to="/tratamentos/neurofeedback">SAIBA MAIS</Link>
+                      <Link to="/tratamentos/neuromodulacao">SAIBA MAIS</Link>
                     </Button>
                   </div>
                 </div>
