@@ -10,7 +10,8 @@ export const NAV_ITEMS = {
     "Esquizofrenia",
     "TOD",
     "TOC",
-    "Transtornos Alimentares"
+    "Transtornos Alimentares",
+    "Neuromodulação"
   ],
   specialties: [
     "Fonoaudiologia",
@@ -20,7 +21,6 @@ export const NAV_ITEMS = {
     "Fisioterapia",
     "Nutrição",
     "Terapia Ocupacional",
-    "PECS",
-    "Neuromodulação"
+    "PECS"
   ]
 };
