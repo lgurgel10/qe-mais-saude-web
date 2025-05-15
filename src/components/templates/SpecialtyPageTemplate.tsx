@@ -97,7 +97,20 @@ Nossos especialistas em PECS são certificados e experientes, trabalhando em fas
 
 const SpecialtyPageTemplate = () => {
   const { type } = useParams<{ type: string }>();
-  const normalizedType = type?.toLowerCase().replace(/\s+/g, '-') || '';
+  
+  // Improved handling of the type parameter
+  const normalizeType = (input: string | undefined): string => {
+    if (!input) return '';
+    
+    // Convert accented characters to non-accented
+    const withoutAccents = input.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    
+    // Convert to lowercase and replace spaces with hyphens
+    return withoutAccents.toLowerCase().replace(/\s+/g, '-');
+  };
+  
+  const normalizedType = normalizeType(type);
+  console.log("Specialty page - URL param:", type, "Normalized to:", normalizedType);
   const specialty = specialtyData[normalizedType];
 
   useEffect(() => {

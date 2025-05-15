@@ -251,7 +251,20 @@ Estas técnicas são utilizadas como complemento ao tratamento convencional para
 
 const TreatmentPageTemplate = () => {
   const { type } = useParams<{ type: string }>();
-  const normalizedType = type?.toLowerCase().replace(/\s+/g, '-') || '';
+  
+  // Improved handling of the type parameter
+  const normalizeType = (input: string | undefined): string => {
+    if (!input) return '';
+    
+    // Convert accented characters to non-accented
+    const withoutAccents = input.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    
+    // Convert to lowercase and replace spaces with hyphens
+    return withoutAccents.toLowerCase().replace(/\s+/g, '-');
+  };
+  
+  const normalizedType = normalizeType(type);
+  console.log("Treatment page - URL param:", type, "Normalized to:", normalizedType);
   const treatment = treatmentData[normalizedType];
 
   useEffect(() => {
