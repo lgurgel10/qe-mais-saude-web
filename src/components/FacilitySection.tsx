@@ -41,67 +41,55 @@ export default function FacilitySection() {
               sempre acompanhadas por uma equipe de apoio treinada para auxiliá-las a sair de suas 
               zonas de conforto e experimentar novas atividades.
             </p>
-            
-            <div className="pt-4">
-              <Button asChild className="bg-qegold hover:bg-qegold-dark text-white h-12 px-8 rounded-md">
-                <a href="/estrutura">Conheça nossas instalações</a>
-              </Button>
-            </div>
           </div>
           {/* Carousel Column - Desktop only */}
-          <div className="hidden lg:flex lg:w-1/2 items-stretch justify-center">
-            <div className="flex flex-col h-full justify-between w-full">
-              <Carousel className="flex-1 h-full w-full max-w-full">
-                <CarouselContent className="h-full">
-                  <CarouselItem className="h-full flex items-center">
-                    <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                      <AspectRatio ratio={16/9} className="h-full">
-                        <img 
-                          src="/images/foto 4.jpg" 
-                          alt="Ambiente 1 QE+" 
-                          className="w-full h-full object-cover" 
-                        />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem className="h-full flex items-center">
-                    <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                      <AspectRatio ratio={16/9} className="h-full">
-                        <img 
-                          src="/images/foto 5.jpg" 
-                          alt="Ambiente 2 QE+" 
-                          className="w-full h-full object-cover" 
-                        />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem className="h-full flex items-center">
-                    <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                      <AspectRatio ratio={16/9} className="h-full">
-                        <img 
-                          src="/images/foto 6.jpg" 
-                          alt="Ambiente 3 QE+" 
-                          className="w-full h-full object-cover" 
-                        />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem className="h-full flex items-center">
-                    <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                      <AspectRatio ratio={16/9} className="h-full">
-                        <img 
-                          src="/images/foto 7.jpg" 
-                          alt="Ambiente 4 QE+" 
-                          className="w-full h-full object-cover" 
-                        />
-                      </AspectRatio>
-                    </div>
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
-            </div>
+          <div className="hidden lg:flex lg:w-1/2 items-start h-full">
+            <Carousel className="w-full h-full min-h-[430px]">
+              <CarouselContent className="h-full">
+                <CarouselItem className="h-full flex items-stretch">
+                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
+                    <img 
+                      src="/images/foto 4.jpg" 
+                      alt="Ambiente 1 QE+" 
+                      className="w-full h-full object-cover" 
+                      style={{ objectPosition: 'center' }}
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="h-full flex items-stretch">
+                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
+                    <img 
+                      src="/images/foto 5.jpg" 
+                      alt="Ambiente 2 QE+" 
+                      className="w-full h-full object-cover" 
+                      style={{ objectPosition: 'center' }}
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="h-full flex items-stretch">
+                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
+                    <img 
+                      src="/images/foto 6.jpg" 
+                      alt="Ambiente 3 QE+" 
+                      className="w-full h-full object-cover" 
+                      style={{ objectPosition: 'center' }}
+                    />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="h-full flex items-stretch">
+                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
+                    <img 
+                      src="/images/foto 7.jpg" 
+                      alt="Ambiente 4 QE+" 
+                      className="w-full h-full object-cover" 
+                      style={{ objectPosition: 'center' }}
+                    />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
           </div>
         </div>
         {/* Carousel Mobile - below text */}
