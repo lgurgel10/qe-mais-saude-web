@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 import NavDropdown from "./NavDropdown";
 import { NAV_ITEMS } from "./NavItems";
@@ -11,6 +10,21 @@ type MobileMenuProps = {
 };
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const location = useLocation();
+
+  const handleScrollToEstrutura = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onClose && onClose();
+    if (window.location.pathname === "/") {
+      const el = document.getElementById("estrutura");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#estrutura";
+    }
+  };
+
   return (
     <div 
       className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
@@ -50,13 +64,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           isMobile
         />
         
-        <Link 
-          to="/estrutura" 
+        <a 
+          href="/#estrutura" 
           className="block py-3 text-lg font-medium text-gray-800 hover:text-qegold border-b border-gray-200"
-          onClick={onClose}
+          onClick={handleScrollToEstrutura}
         >
           Nossa Estrutura
-        </Link>
+        </a>
         <Link 
           to="/blog" 
           className="block py-3 text-lg font-medium text-gray-800 hover:text-qegold border-b border-gray-200"
@@ -64,13 +78,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         >
           Blog
         </Link>
-        <Link 
-          to="/contato" 
+        <a 
+          href="https://wa.me/5581982929292"
+          target="_blank"
+          rel="noopener noreferrer"
           className="block py-3 text-center font-medium bg-qegold text-white rounded-md hover:bg-qegold-dark transition-colors duration-200"
-          onClick={onClose}
         >
           Contato
-        </Link>
+        </a>
       </div>
     </div>
   );

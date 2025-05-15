@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const specialties = [
   { name: "Psicologia" },
@@ -21,6 +21,8 @@ function slugify(title: string) {
 }
 
 export default function Footer() {
+  const location = useLocation();
+
   const handleScrollToSpecialties = (e: React.MouseEvent) => {
     e.preventDefault();
     const el = document.getElementById('especialidades');
@@ -28,6 +30,18 @@ export default function Footer() {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
       window.location.href = '/#especialidades';
+    }
+  };
+
+  const handleScrollToAbout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.location.pathname === "/") {
+      const el = document.getElementById("about");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#about";
     }
   };
 
@@ -42,27 +56,37 @@ export default function Footer() {
         <div className="flex-1 flex flex-col items-start mb-8 md:mb-0">
           <h3 className="font-bold text-lg mb-2 border-b-2 border-white w-fit pb-1">MENU</h3>
           <ul className="space-y-1 mt-2">
-            <li><Link to="/" className="hover:underline">Home</Link></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
             <li><Link to="/instituto" className="hover:underline">Instituto</Link></li>
-            <li><Link to="/tratamentos" className="hover:underline">Tratamentos</Link></li>
-            <li><Link to="/especialidades" className="hover:underline">Especialidades</Link></li>
+            <li><a href="/#about" className="hover:underline" onClick={handleScrollToAbout}>Tratamentos</a></li>
+            <li><a href="/#especialidades" className="hover:underline">Especialidades</a></li>
+            <li><a href="/#estrutura" className="hover:underline">Nossa Estrutura</a></li>
             <li><Link to="/blog" className="hover:underline">Blog</Link></li>
-            <li><Link to="/contato" className="hover:underline">Contato</Link></li>
           </ul>
         </div>
-        {/* Especialidades */}
+        {/* Contato */}
         <div className="flex-1 flex flex-col items-start mb-8 md:mb-0">
-          <h3 className="font-bold text-lg mb-2 border-b-2 border-white w-fit pb-1">ESPECIALIDADES</h3>
-          <ul className="space-y-1 mt-2">
-            {specialties.slice(0, 5).map((s) => (
-              <li key={s.name}>
-                <Link to={`/especialidades/${slugify(s.name)}`} className="hover:underline">
-                  {s.name}
-                </Link>
-              </li>
-            ))}
+          <h3 className="font-bold text-lg mb-2 border-b-2 border-white w-fit pb-1">CONTATO</h3>
+          <ul className="space-y-4 mt-2">
             <li>
-              <a href="#especialidades" onClick={handleScrollToSpecialties} className="hover:underline cursor-pointer">Ver Todos</a>
+              <a
+                href="https://wa.me/5581982929292"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <img src="/images/telefone.png" alt="Telefone" className="w-5 h-5 inline-block" />
+                <span className="font-medium">+55 81 98292-9292</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:comercial@qemais.com.br"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <img src="/images/email.png" alt="E-mail" className="w-5 h-5 inline-block" />
+                <span className="font-medium">comercial@qemais.com.br</span>
+              </a>
             </li>
           </ul>
         </div>

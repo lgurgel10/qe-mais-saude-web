@@ -14,6 +14,16 @@ const Index = () => {
     
     // Update page title
     document.title = "Instituto QE+ | Saúde Mental e Desenvolvimento Humano";
+
+    // Scroll suave para a seção 'estrutura' se o hash estiver presente
+    if (window.location.hash === "#estrutura") {
+      setTimeout(() => {
+        const el = document.getElementById("estrutura");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
   }, []);
 
   return (
