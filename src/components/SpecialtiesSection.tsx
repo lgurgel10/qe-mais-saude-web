@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
@@ -73,7 +72,7 @@ const SpecialtiesSection = () => {
   const displayedSpecialties = showAll ? specialties : specialties.slice(0, 6);
 
   return (
-    <section className="py-16 md:py-24 bg-qebeige-light">
+    <section id="especialidades" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-playfair text-gray-800">
@@ -125,7 +124,17 @@ const SpecialtiesSection = () => {
             <Button 
               variant="default" 
               className="bg-qegold hover:bg-qegold-dark text-white px-8 py-6 h-auto text-base font-medium"
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => {
+                if (showAll) {
+                  setShowAll(false);
+                  setTimeout(() => {
+                    const el = document.getElementById('especialidades');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                } else {
+                  setShowAll(true);
+                }
+              }}
             >
               {showAll ? "MOSTRAR MENOS" : "VER MAIS"}
             </Button>
