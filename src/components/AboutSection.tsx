@@ -26,22 +26,22 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {/* TDAH Card */}
           <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow duration-300 group">
-            <div className="relative w-full min-h-[400px]">
+            <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/c6271fd6-16cc-412f-8baf-72f25de71dec.png" 
                   alt="TDAH - Tratamento para déficit de atenção e hiperatividade" 
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-qegold/30 via-qegold/60 to-qegold/90"></div>
               </div>
               
-              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8">
+              <div className="relative h-full flex flex-col justify-between p-4 sm:p-6">
                 <div className="flex-grow"></div>
                 <div className="text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold font-playfair text-white mb-3">TDAH</h3>
-                  <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
-                  <p className="text-sm sm:text-base text-white text-center mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold font-playfair text-white mb-2">TDAH</h3>
+                  <div className="w-16 h-0.5 bg-white mx-auto mb-3"></div>
+                  <p className="text-sm text-white text-center mb-4">
                     É uma doença crônica onde o indivíduo possui uma dificuldade de atenção, hiperatividade e impulsividade. 
                     Os sintomas geralmente são identificados na infância e permanece até a vida adulta, porém mais adaptado.
                   </p>
@@ -62,22 +62,22 @@ export default function AboutSection() {
 
           {/* Ansiedade Card */}
           <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow duration-300 group">
-            <div className="relative w-full min-h-[400px]">
+            <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png" 
                   alt="Ansiedade - Tratamento para transtornos de ansiedade" 
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-qegold/30 via-qegold/60 to-qegold/90"></div>
               </div>
               
-              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8">
+              <div className="relative h-full flex flex-col justify-between p-4 sm:p-6">
                 <div className="flex-grow"></div>
                 <div className="text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold font-playfair text-white mb-3">Ansiedade</h3>
-                  <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
-                  <p className="text-sm sm:text-base text-white text-center mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold font-playfair text-white mb-2">Ansiedade</h3>
+                  <div className="w-16 h-0.5 bg-white mx-auto mb-3"></div>
+                  <p className="text-sm text-white text-center mb-4">
                     A ansiedade pode ser provocada por qualquer motivo, pois depende da importância que o indivíduo 
                     dá a uma determinada situação e pode surgir em adultos ou crianças.
                   </p>
@@ -98,22 +98,22 @@ export default function AboutSection() {
 
           {/* Neurofeedback Card */}
           <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow duration-300 group sm:col-span-2 lg:col-span-1">
-            <div className="relative w-full min-h-[400px]">
+            <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/fb6e7c8f-4db4-484a-be07-e3e3c60645ea.png" 
                   alt="Neurofeedback - Tratamentos avançados para o cérebro" 
-                  className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-qegold/30 via-qegold/60 to-qegold/90"></div>
               </div>
               
-              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8">
+              <div className="relative h-full flex flex-col justify-between p-4 sm:p-6">
                 <div className="flex-grow"></div>
                 <div className="text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold font-playfair text-white mb-3">Neurofeedback</h3>
-                  <div className="w-16 h-0.5 bg-white mx-auto mb-4"></div>
-                  <p className="text-sm sm:text-base text-white text-center mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold font-playfair text-white mb-2">Neurofeedback</h3>
+                  <div className="w-16 h-0.5 bg-white mx-auto mb-3"></div>
+                  <p className="text-sm text-white text-center mb-4">
                     O neurofeedback é um tratamento cujo principal objetivo é o de melhorar o funcionamento cerebral 
                     por meio da neuromodulação autorregulatória não invasiva.
                   </p>
