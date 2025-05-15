@@ -50,7 +50,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0 text-left">
         {/* Logo */}
         <div className="flex flex-col items-start md:items-start md:w-1/4 mb-8 md:mb-0">
-          <img src="/images/logobranca.png" alt="QE+ Logo" className="w-24 h-auto mb-4" />
+          <a href="/">
+            <img src="/images/logobranca.png" alt="QE+ Logo" className="w-24 h-auto mb-4 cursor-pointer" />
+          </a>
         </div>
         {/* Menu */}
         <div className="flex-1 flex flex-col items-start mb-8 md:mb-0">
