@@ -8,21 +8,8 @@ export default function AboutSection() {
   const isMobile = useIsMobile();
   
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white">
+    <section className="py-4 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-gray-800 mb-4">
-            Tratamentos <span className="text-qegold">Essenciais</span>
-          </h2>
-          <div className="w-24 h-1 bg-qegold mx-auto mb-6"></div>
-          <p className="text-base sm:text-lg text-gray-600">
-            Oferecemos tratamentos especializados e humanizados para promover o bem-estar, 
-            o equilíbrio emocional e o desenvolvimento de cada paciente. Conheça os principais 
-            métodos utilizados por nossa equipe multidisciplinar para ajudar pessoas com TDAH, 
-            autismo, TOC e outros transtornos do neurodesenvolvimento.
-          </p>
-        </div>
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {/* TDAH Card */}
           <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow duration-300 group">

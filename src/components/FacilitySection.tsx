@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { 
@@ -10,14 +10,31 @@ import {
 } from "@/components/ui/carousel";
 
 export default function FacilitySection() {
+  const images = [
+    "/images/foto 5.jpg",
+    "/images/foto 4.jpg",
+    "/images/foto 6.jpg",
+    "/images/foto 7.jpg",
+    "/images/foto 8.jpg",
+    "/images/foto 9.jpg"
+  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-playfair text-gray-800">
             Por dentro do <span className="text-qegold">QE+</span>
           </h2>
-          <div className="w-24 h-1 bg-qegold mt-4 mb-6"></div>
+          <div className="w-24 h-1 bg-qegold mx-auto mt-4 mb-2"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
@@ -44,106 +61,70 @@ export default function FacilitySection() {
           </div>
           {/* Carousel Column - Desktop only */}
           <div className="hidden lg:flex lg:w-1/2 items-start h-full">
-            <Carousel className="w-full h-full min-h-[430px]">
-              <CarouselContent className="h-full">
-                <CarouselItem className="h-full flex items-stretch">
-                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                    <img 
-                      src="/images/foto 4.jpg" 
-                      alt="Ambiente 1 QE+" 
-                      className="w-full h-full object-cover" 
-                      style={{ objectPosition: 'center' }}
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="h-full flex items-stretch">
-                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                    <img 
-                      src="/images/foto 5.jpg" 
-                      alt="Ambiente 2 QE+" 
-                      className="w-full h-full object-cover" 
-                      style={{ objectPosition: 'center' }}
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="h-full flex items-stretch">
-                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                    <img 
-                      src="/images/foto 6.jpg" 
-                      alt="Ambiente 3 QE+" 
-                      className="w-full h-full object-cover" 
-                      style={{ objectPosition: 'center' }}
-                    />
-                  </div>
-                </CarouselItem>
-                <CarouselItem className="h-full flex items-stretch">
-                  <div className="rounded-2xl overflow-hidden shadow-lg w-full h-full">
-                    <img 
-                      src="/images/foto 7.jpg" 
-                      alt="Ambiente 4 QE+" 
-                      className="w-full h-full object-cover" 
-                      style={{ objectPosition: 'center' }}
-                    />
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
-            </Carousel>
+            <div className="relative w-full h-full min-h-[430px]">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                    index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`Ambiente ${index + 1} QE+`}
+                    className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    style={{ objectPosition: 'center' }}
+                  />
+                </div>
+              ))}
+              {/* Dots */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide ? "bg-qegold scale-125" : "bg-white/50 hover:bg-white/75"
+                    }`}
+                    aria-label={`Ir para slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         {/* Carousel Mobile - below text */}
         <div className="w-full flex flex-col items-center lg:hidden mt-8">
-          <Carousel className="w-full max-w-md">
-            <CarouselContent>
-              <CarouselItem>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <AspectRatio ratio={16/9}>
-                    <img 
-                      src="/images/foto 4.jpg" 
-                      alt="Ambiente 1 QE+" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </AspectRatio>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <AspectRatio ratio={16/9}>
-                    <img 
-                      src="/images/foto 5.jpg" 
-                      alt="Ambiente 2 QE+" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </AspectRatio>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <AspectRatio ratio={16/9}>
-                    <img 
-                      src="/images/foto 6.jpg" 
-                      alt="Ambiente 3 QE+" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </AspectRatio>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <AspectRatio ratio={16/9}>
-                    <img 
-                      src="/images/foto 7.jpg" 
-                      alt="Ambiente 4 QE+" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </AspectRatio>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
+          <div className="relative w-full max-w-md min-h-[320px]">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                  index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`Ambiente ${index + 1} QE+`}
+                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  style={{ objectPosition: 'center' }}
+                />
+              </div>
+            ))}
+            {/* Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? "bg-qegold scale-125" : "bg-white/50 hover:bg-white/75"
+                  }`}
+                  aria-label={`Ir para slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

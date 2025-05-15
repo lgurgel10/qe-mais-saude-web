@@ -72,10 +72,6 @@ export default function HeroSection() {
               <span className="text-qegold"> QE+</span>
             </h1>
             
-            <p className="text-xl md:text-2xl font-playfair text-white">
-              Centro de excelência em saúde mental e desenvolvimento humano
-            </p>
-            
             <p className="text-white">
               Somos especializados no tratamento de transtornos como ansiedade, depressão, TDAH, TOD, TEA, entre outros. Nossa infraestrutura de qualidade está pronta para ajudar você a melhorar sua qualidade de vida.
             </p>
