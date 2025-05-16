@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -70,7 +69,7 @@ const SpecialtyPageTemplate = () => {
               <img 
                 src={specialty.image} 
                 alt={specialty.title} 
-                className="w-full h-auto object-cover rounded-lg shadow-md mb-8"
+                className="w-full max-h-72 md:max-h-80 object-cover rounded-lg shadow-md mb-8 mx-auto md:mx-0"
               />
               
               <div className="prose max-w-none">
@@ -91,7 +90,7 @@ const SpecialtyPageTemplate = () => {
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="https://api.whatsapp.com/send?phone=5581940474981" 
+                  href="https://api.whatsapp.com/send?phone=5581982929292" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-qegold hover:bg-qegold-dark text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 inline-flex items-center"

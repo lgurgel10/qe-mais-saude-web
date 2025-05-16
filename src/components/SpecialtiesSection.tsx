@@ -16,55 +16,55 @@ const specialties: Specialty[] = [
     id: 1,
     title: "Psicologia",
     description: "No Instituto QE+ os psicólogos exploram conceitos como percepção, cognição, atenção, emoção, inteligência, entre outras.",
-    image: "/lovable-uploads/7ef31662-90db-4ffc-8504-8211d10ca738.png"
+    image: "/lovable-uploads/psico.png"
   },
   {
     id: 2,
     title: "Fisioterapia",
     description: "O objetivo desta área é preservar, manter, desenvolver ou restaurar a integridade de órgãos, sistemas ou funções.",
-    image: "/lovable-uploads/63c49ab7-cf78-40c5-8384-bdb002d8064e.png"
+    image: "/lovable-uploads/fisio.png"
   },
   {
     id: 3,
     title: "Fonoaudiologia",
     description: "Em nosso Instituto ele atua em modelo ambulatorial atendendo as diversas demandas tanto com o público infantil quanto nos adultos.",
-    image: "/lovable-uploads/60ed31d1-9cb8-42e2-b8d6-96bb13f473fb.png"
+    image: "/lovable-uploads/fono.png"
   },
   {
     id: 4,
     title: "Nutrição",
     description: "Nossa equipe está apta a elaborar um planejamento alimentar de modo a suprir a necessidade de nutrientes de cada paciente e a prescrever uma dieta equilibrada.",
-    image: "/lovable-uploads/0defba2b-9892-42cb-b244-af293c16f393.png"
+    image: "/lovable-uploads/nutri.png"
   },
   {
     id: 5,
     title: "PECS",
     description: "Sistema único de intervenção aumentativa /alternativa na comunicação, destinado geralmente para crianças com perturbação do espectro do autismo.",
-    image: "/lovable-uploads/7f94496d-8e98-457f-b401-a2b2e3a017a0.png"
+    image: "/lovable-uploads/PECS.png"
   },
   {
     id: 6,
     title: "Terapia Ocupacional",
     description: "A base de suas ações compreende abordagens e/ou condutas fundamentadas em critérios avaliativos com a análise pessoal, familiar, coletivo e social",
-    image: "/lovable-uploads/ed663827-4eb7-4797-a901-3c242f1f994d.png"
+    image: "/lovable-uploads/terapiaoc.png"
   },
   {
     id: 7,
     title: "Terapia ABA",
     description: "Análise do Comportamento Aplicada é uma terapia baseada em evidências que ajuda a desenvolver habilidades sociais, comunicativas e adaptativas, especialmente para pessoas com TEA.",
-    image: "/lovable-uploads/770364f2-963d-4af9-93d4-7212813b8a8a.png"
+    image: "/lovable-uploads/terapiaaba.png"
   },
   {
     id: 8,
     title: "Psicanálise",
     description: "Abordagem terapêutica que explora o inconsciente para compreender comportamentos e emoções, promovendo autoconhecimento e bem-estar psíquico.",
-    image: "/lovable-uploads/18c840fa-1072-497a-96db-9b81c39f5cd9.png"
+    image: "/lovable-uploads/psicanalise.png"
   },
   {
     id: 9,
     title: "Psiquiatria",
     description: "Especialidade médica focada no diagnóstico, tratamento e prevenção de transtornos mentais, oferecendo suporte multidisciplinar para a saúde emocional.",
-    image: "/lovable-uploads/768f3959-3f22-4e4a-90c9-44f8eb65f29a.png"
+    image: "/lovable-uploads/psiqui.png"
   },
 ];
 

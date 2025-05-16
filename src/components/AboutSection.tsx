@@ -16,7 +16,7 @@ export default function AboutSection() {
             <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
-                  src="/lovable-uploads/c6271fd6-16cc-412f-8baf-72f25de71dec.png" 
+                  src="/lovable-uploads/TDAH.png" 
                   alt="TDAH - Tratamento para déficit de atenção e hiperatividade" 
                   className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />
@@ -52,7 +52,7 @@ export default function AboutSection() {
             <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
-                  src="/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png" 
+                  src="/lovable-uploads/ansiedade.png" 
                   alt="Ansiedade - Tratamento para transtornos de ansiedade" 
                   className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />
@@ -88,7 +88,7 @@ export default function AboutSection() {
             <div className="relative w-full min-h-[300px]">
               <div className="absolute inset-0">
                 <img 
-                  src="/lovable-uploads/fb6e7c8f-4db4-484a-be07-e3e3c60645ea.png" 
+                  src="/lovable-uploads/neuro.png" 
                   alt="Neurofeedback - Tratamentos avançados para o cérebro" 
                   className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                 />

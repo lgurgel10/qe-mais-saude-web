@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -70,7 +69,7 @@ const TreatmentPageTemplate = () => {
               <img 
                 src={treatment.image} 
                 alt={treatment.title} 
-                className="w-full h-auto object-cover rounded-lg shadow-md mb-8"
+                className="w-full max-h-72 md:max-h-80 object-cover rounded-lg shadow-md mb-8 mx-auto md:mx-0"
               />
               
               <div className="prose max-w-none">
@@ -111,7 +110,7 @@ const TreatmentPageTemplate = () => {
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="https://api.whatsapp.com/send?phone=5581940474981" 
+                  href="https://api.whatsapp.com/send?phone=5581982929292" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-gray-100 text-qegold font-medium py-3 px-6 rounded-md transition-colors duration-300 inline-flex items-center"
