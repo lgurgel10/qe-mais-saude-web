@@ -8,13 +8,15 @@ export default function HeroSection() {
   
   // Desktop images
   const desktopImages = [
+    "/images/bv1.jpg",
     "/images/foto%201.jpg",
     "/images/foto%202.jpg",
-    "/images/foto%203.jpg"
+    "/images/foto%203.jpg",
   ];
   
   // Mobile images
   const mobileImages = [
+    "/images/bv1.jpg",
     "/images/foto%201%20mobile.jpg",
     "/images/foto%202%20mobile.jpg",
     "/images/foto%203%20mobile.jpg"
