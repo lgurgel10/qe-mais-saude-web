@@ -15,7 +15,12 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const WHATSAPP_LINK = "https://wa.me/5581982929292";
 const WHATSAPP_DISPLAY = "+55 81 98292-9292";
-const WORK_HOURS = "Comercial";
+
+const WORK_HOURS = {
+  "Boa Viagem": "Segunda à sexta: 8:00 às 20:00 / Sábado: 8:00 às 17:00",
+  "Piedade": "Segunda à sexta: 8:00 às 18:00",
+  "Casa Forte": "Segunda à sexta: 8:00 às 20:00"
+};
 
 export default function LocationsSection() {
   const carouselsRef = useRef([]);
@@ -169,7 +174,7 @@ export default function LocationsSection() {
                         </div>
                         <div className="mb-4 flex items-center gap-2">
                           <span className="text-gray-700 font-semibold">Horário:</span>
-                          <span className="text-gray-800">{WORK_HOURS}</span>
+                          <span className="text-gray-800">{WORK_HOURS[location.name]}</span>
                         </div>
                         <div className="mb-6">
                           <div className="w-full flex justify-center">
