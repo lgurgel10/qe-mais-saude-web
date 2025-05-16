@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Calendar } from "lucide-react";
@@ -8,7 +7,6 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { fetchBlogBySlug, getBlogBySlug } from "@/data/blogData";
 import { useToast } from "@/components/ui/use-toast";
 import { BlogPost as BlogPostType } from "@/types/blogTypes";
-import { normalizeImagePath } from "@/utils/blogUtils";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -159,7 +157,7 @@ const BlogPost = () => {
             
             <div className="mb-8">
               <img 
-                src={normalizeImagePath(post.image)} 
+                src={post.image} 
                 alt={post.title} 
                 className="w-full h-auto rounded-lg object-cover max-h-96"
               />

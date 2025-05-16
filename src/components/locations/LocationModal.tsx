@@ -7,7 +7,6 @@ import {
   DialogTitle,
   DialogDescription
 } from "@/components/ui/dialog";
-import { normalizeImagePath } from "@/utils/blogUtils";
 
 interface LocationModalProps {
   location: {
@@ -56,7 +55,7 @@ export function LocationModal({ location, workHours }: LocationModalProps) {
                     <div className="flex">
                       {location.images.map((img, i) => (
                         <div key={i} className="min-w-0 shrink-0 grow-0 basis-full flex items-center justify-center h-full">
-                          <img src={normalizeImagePath(img)} alt="Foto da unidade" className="w-full h-full object-cover rounded-lg" />
+                          <img src={img} alt="Foto da unidade" className="w-full h-full object-cover rounded-lg" />
                         </div>
                       ))}
                     </div>
