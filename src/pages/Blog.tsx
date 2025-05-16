@@ -1,23 +1,19 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { fetchBlogPosts, getBlogPosts, BlogPost } from "@/data/blogData";
+import { fetchBlogPosts, getBlogPosts } from "@/data/blogData";
 import { useToast } from "@/components/ui/use-toast";
+import { BlogPost, BlogPaginationResult } from "@/types/blogTypes";
 
 const Blog = () => {
   const navigate = useNavigate();
   const { page } = useParams();
   const currentPage = page ? parseInt(page) : 1;
   const [loading, setLoading] = useState(true);
-  const [blogData, setBlogData] = useState<{
-    posts: BlogPost[];
-    totalPages: number;
-    currentPage: number;
-  }>({
+  const [blogData, setBlogData] = useState<BlogPaginationResult>({
     posts: [],
     totalPages: 1,
     currentPage: 1

@@ -1,12 +1,12 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { fetchBlogBySlug, getBlogBySlug, BlogPost as BlogPostType } from "@/data/blogData";
+import { fetchBlogBySlug, getBlogBySlug } from "@/data/blogData";
 import { useToast } from "@/components/ui/use-toast";
+import { BlogPost as BlogPostType } from "@/types/blogTypes";
 
 const BlogPost = () => {
   const { slug } = useParams();
