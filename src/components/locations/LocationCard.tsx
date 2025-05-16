@@ -2,9 +2,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import {
-  DialogTrigger
-} from "@/components/ui/dialog";
+import { DialogTrigger } from "@/components/ui/dialog";
+import { CarouselNavigation } from "./CarouselNavigation";
 
 interface LocationCardProps {
   location: {
@@ -20,24 +19,17 @@ interface LocationCardProps {
 }
 
 export function LocationCard({ location, index, carouselRef, setOpenModal }: LocationCardProps) {
-  const handlePrev = () => {
-    if (carouselRef.current[index] && carouselRef.current[index].scrollPrev) {
-      carouselRef.current[index].scrollPrev();
-    }
-  };
+  const [api, setApi] = useState<any>(null);
   
-  const handleNext = () => {
-    if (carouselRef.current[index] && carouselRef.current[index].scrollNext) {
-      carouselRef.current[index].scrollNext();
-    }
-  };
-
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col">
       <div className="relative w-full h-64 overflow-hidden flex items-center justify-center flex-shrink-0">
         <Carousel
           className="w-full h-full"
-          setApi={api => { carouselRef.current[index] = api; }}
+          setApi={api => { 
+            setApi(api);
+            carouselRef.current[index] = api;
+          }}
           opts={{ loop: true }}
         >
           <CarouselContent>
@@ -51,23 +43,7 @@ export function LocationCard({ location, index, carouselRef, setOpenModal }: Loc
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* Chevron SVG arrows */}
-          <button
-            className="absolute left-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-3xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
-            onClick={handlePrev}
-            aria-label="Anterior"
-            type="button"
-          >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button
-            className="absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-3xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
-            onClick={handleNext}
-            aria-label="Próximo"
-            type="button"
-          >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
+          <CarouselNavigation carouselApi={api} />
         </Carousel>
       </div>
       <div className="p-6 flex-1 flex flex-col justify-end">
