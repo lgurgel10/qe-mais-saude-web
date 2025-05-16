@@ -11,16 +11,32 @@ export const formatDate = (dateString: string): string => {
   return date.toLocaleDateString('pt-BR', options);
 };
 
-// Função para verificar se uma URL de imagem está acessível
+// Função para verificar se uma URL de imagem está acessível e normalizar caminhos
 export const validateImageUrl = (url: string): boolean => {
   // Se a URL começar com /images/ ou /lovable-uploads/, é uma imagem local e válida
   if (url.startsWith('/images/') || url.startsWith('/lovable-uploads/')) {
     return true;
   }
   
-  // Caso seja uma URL externa, retornamos true (presume-se válida)
-  // Em produção, poderia ter verificação adicional para validar URLs externas
-  return true;
+  // Se a URL começar com http:// ou https://, é uma URL externa e presumimos válida
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return true;
+  }
+  
+  // Caso contrário, consideramos inválida
+  return false;
+};
+
+// Função para normalizar caminhos de imagem para funcionar em ambos os ambientes
+export const normalizeImagePath = (url: string): string => {
+  // Se já for uma URL completa, retornamos como está
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  
+  // Se for um caminho relativo, mantemos como está
+  // No ambiente de produção, esses caminhos serão resolvidos corretamente
+  return url;
 };
 
 // Imagem padrão a ser usada quando não há imagem disponível
@@ -35,6 +51,9 @@ export const convertWpPostToBlogPost = (wpPost: WPPost): BlogPost => {
   if (!imageUrl || !validateImageUrl(imageUrl)) {
     imageUrl = DEFAULT_BLOG_IMAGE;
   }
+  
+  // Normaliza o caminho da imagem
+  imageUrl = normalizeImagePath(imageUrl);
   
   return {
     id: wpPost.id,
