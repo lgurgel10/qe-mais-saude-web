@@ -1,9 +1,11 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Instituto from "./pages/Instituto";
 import NotFound from "./pages/NotFound";
 import SpecialtyPageTemplate from "./components/templates/SpecialtyPageTemplate";
 import TreatmentPageTemplate from "./components/templates/TreatmentPageTemplate";
@@ -19,8 +21,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           
-          {/* Instituto route - to be implemented */}
-          <Route path="/instituto" element={<NotFound />} />
+          {/* Instituto route */}
+          <Route path="/instituto" element={<Instituto />} />
           
           {/* Tratamentos routes */}
           <Route path="/tratamentos" element={<NotFound />} />
