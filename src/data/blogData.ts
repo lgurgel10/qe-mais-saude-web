@@ -9,6 +9,90 @@ export interface BlogPost {
   content: string;
 }
 
+interface WPPost {
+  id: number;
+  title: { rendered: string };
+  slug: string;
+  date: string;
+  excerpt: { rendered: string };
+  content: { rendered: string };
+  featured_media: number;
+  _embedded?: {
+    'wp:featuredmedia'?: Array<{ source_url: string }>;
+  };
+}
+
+// URL base da API do WordPress - substitua pelo seu domínio
+const WP_API_URL = 'https://qemais.com.br/wp-json/wp/v2';
+
+// Função para formatar a data no estilo "5 de março de 2025"
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+  return date.toLocaleDateString('pt-BR', options);
+};
+
+// Converter post do WordPress para o formato do nosso BlogPost
+const convertWpPostToBlogPost = (wpPost: WPPost): BlogPost => {
+  const imageUrl = wpPost._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/lovable-uploads/e76e4681-0b5e-4cf9-8472-d8fb2d43bf7b.png';
+  
+  return {
+    id: wpPost.id,
+    title: wpPost.title.rendered,
+    slug: wpPost.slug,
+    date: formatDate(wpPost.date),
+    image: imageUrl,
+    excerpt: wpPost.excerpt.rendered.replace(/<[^>]*>/g, ''), // Remove HTML tags from excerpt
+    content: wpPost.content.rendered
+  };
+};
+
+// Função para buscar posts do WordPress
+export const fetchBlogPosts = async (page: number = 1, postsPerPage: number = 9): Promise<{
+  posts: BlogPost[];
+  totalPages: number;
+  currentPage: number;
+}> => {
+  try {
+    const response = await fetch(`${WP_API_URL}/posts?page=${page}&per_page=${postsPerPage}&_embed`);
+    const totalPages = parseInt(response.headers.get('X-WP-TotalPages') || '1', 10);
+    const wpPosts = await response.json() as WPPost[];
+    
+    const posts = wpPosts.map(convertWpPostToBlogPost);
+    
+    return {
+      posts,
+      totalPages,
+      currentPage: page
+    };
+  } catch (error) {
+    console.error('Erro ao buscar posts do WordPress:', error);
+    return {
+      posts: [],
+      totalPages: 1,
+      currentPage: page
+    };
+  }
+};
+
+// Função para buscar um post específico pelo slug
+export const fetchBlogBySlug = async (slug: string): Promise<BlogPost | undefined> => {
+  try {
+    const response = await fetch(`${WP_API_URL}/posts?slug=${slug}&_embed`);
+    const wpPosts = await response.json() as WPPost[];
+    
+    if (wpPosts.length === 0) {
+      return undefined;
+    }
+    
+    return convertWpPostToBlogPost(wpPosts[0]);
+  } catch (error) {
+    console.error(`Erro ao buscar post com slug ${slug}:`, error);
+    return undefined;
+  }
+};
+
+// Mantém as funções existentes para fallback caso a API não esteja disponível
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
