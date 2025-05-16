@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const HistorySection = () => {
   const images = [
+    "/images/conheca.png",
     "/images/conheca1.JPG",
     "/images/conheca2.JPG",
     "/images/conheca3.jpg"
@@ -58,7 +59,7 @@ const HistorySection = () => {
                     src={image}
                     alt={`Instituto QE+ ${index + 1}`}
                     className={`w-full h-full rounded-2xl shadow-lg ${
-                      index === images.length - 1 || index === 2 ? 'object-cover' : 'object-contain'
+                      index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'
                     }`}
                   />
                 </div>
@@ -94,7 +95,7 @@ const HistorySection = () => {
                   src={image}
                   alt={`Instituto QE+ ${index + 1}`}
                   className={`w-full h-full rounded-2xl shadow-lg ${
-                    index === images.length - 1 || index === 2 ? 'object-cover' : 'object-contain'
+                    index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'
                   }`}
                 />
               </div>
