@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { DialogTrigger } from "@/components/ui/dialog";
 import { CarouselNavigation } from "./CarouselNavigation";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 interface LocationCardProps {
   location: {
@@ -36,7 +37,7 @@ export function LocationCard({ location, index, carouselRef, setOpenModal }: Loc
             {location.images.map((img, i) => (
               <CarouselItem key={i} className="w-full h-full aspect-[4/3] flex items-center justify-center">
                 <img 
-                  src={img} 
+                  src={normalizeImagePath(img)} 
                   alt={`Foto da unidade ${location.name}`} 
                   className="w-full h-full object-cover rounded-none bg-gray-100 aspect-[4/3]" 
                 />

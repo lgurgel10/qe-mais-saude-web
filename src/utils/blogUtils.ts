@@ -11,10 +11,27 @@ export const formatDate = (dateString: string): string => {
   return date.toLocaleDateString('pt-BR', options);
 };
 
+// Função para normalizar caminhos de imagem para garantir que funcionem em produção
+export const normalizeImagePath = (url: string): string => {
+  // Se for uma URL absoluta (http:// ou https://), mantém como está
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  
+  // Se for um caminho relativo sem barra inicial, adiciona a barra
+  if (!url.startsWith('/')) {
+    return `/${url}`;
+  }
+  
+  // Caso contrário, retorna o caminho original
+  return url;
+};
+
 // Função para verificar se uma URL de imagem está acessível
 export const validateImageUrl = (url: string): boolean => {
   // Se a URL começar com /images/ ou /lovable-uploads/, é uma imagem local e válida
-  if (url.startsWith('/images/') || url.startsWith('/lovable-uploads/')) {
+  if (url.startsWith('/images/') || url.startsWith('/lovable-uploads/') || 
+      url.startsWith('images/') || url.startsWith('lovable-uploads/')) {
     return true;
   }
   
@@ -35,6 +52,9 @@ export const convertWpPostToBlogPost = (wpPost: WPPost): BlogPost => {
   if (!imageUrl || !validateImageUrl(imageUrl)) {
     imageUrl = DEFAULT_BLOG_IMAGE;
   }
+  
+  // Normaliza a URL da imagem para garantir que funcione em produção
+  imageUrl = normalizeImagePath(imageUrl);
   
   return {
     id: wpPost.id,
