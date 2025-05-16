@@ -1,4 +1,3 @@
-
 export type TreatmentData = {
   title: string;
   description: string;
@@ -11,45 +10,45 @@ export type TreatmentData = {
 const treatmentData: Record<string, TreatmentData> = {
   "ansiedade": {
     title: "Ansiedade",
-    description: "Tratamento especializado para transtornos de ansiedade com abordagem multidisciplinar.",
-    fullDescription: `A ansiedade é uma resposta natural do organismo a situações de estresse ou perigo. No entanto, quando se torna excessiva, desproporcional ou persistente, pode configurar um transtorno de ansiedade.
+    description: "Tratamento especializado para ansiedade com abordagem multidisciplinar e personalizada.",
+    fullDescription: `A ansiedade é uma resposta natural do corpo ao estresse, mas quando se torna excessiva ou persistente, pode interferir significativamente na qualidade de vida. No Instituto QE+, oferecemos tratamento especializado para ansiedade, combinando diferentes abordagens terapêuticas.
 
-No Instituto QE+, oferecemos tratamento especializado para diversos transtornos de ansiedade, incluindo Transtorno de Ansiedade Generalizada (TAG), Transtorno de Pânico, Fobias Específicas, Transtorno de Ansiedade Social, entre outros.
+Nossa equipe multidisciplinar trabalha para identificar as causas específicas da ansiedade em cada paciente, desenvolvendo um plano de tratamento personalizado que pode incluir psicoterapia, técnicas de relaxamento, mudanças no estilo de vida e, quando necessário, acompanhamento psiquiátrico.
 
-Nossa abordagem integra diferentes especialidades para proporcionar um tratamento completo, que pode incluir psicoterapia, medicação quando necessária, técnicas de relaxamento e mudanças no estilo de vida.`,
+O tratamento visa não apenas aliviar os sintomas, mas também desenvolver habilidades de enfrentamento e resiliência para lidar com situações estressantes no dia a dia.`,
     symptoms: [
       "Preocupação excessiva e persistente",
-      "Inquietação ou sensação de estar com os nervos à flor da pele",
-      "Tensão muscular",
-      "Fadiga constante",
-      "Dificuldade para se concentrar",
+      "Inquietação ou sensação de estar no limite",
+      "Fadiga fácil",
+      "Dificuldade de concentração",
       "Irritabilidade",
-      "Distúrbios do sono",
-      "Sintomas físicos como palpitação, sudorese e tremores"
+      "Tensão muscular",
+      "Problemas de sono",
+      "Sintomas físicos como sudorese, palpitações e falta de ar"
     ],
-    whoAffects: "Os transtornos de ansiedade podem afetar pessoas de todas as idades e origens, sendo mais comuns em adultos jovens e mulheres. Fatores genéticos, ambientais e psicológicos podem contribuir para seu desenvolvimento.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    whoAffects: "A ansiedade pode afetar pessoas de todas as idades, sendo mais comum em mulheres. Pode se manifestar em diferentes fases da vida, desde a infância até a terceira idade, e pode estar associada a fatores genéticos, ambientais e experiências de vida.",
+    image: "/lovable-uploads/ansiedade.png"
   },
   "tdah": {
     title: "TDAH",
-    description: "Tratamento especializado para Transtorno de Déficit de Atenção e Hiperatividade com abordagem multidisciplinar.",
-    fullDescription: `O Transtorno de Déficit de Atenção e Hiperatividade (TDAH) é um transtorno neurobiológico caracterizado por padrões persistentes de desatenção, hiperatividade e impulsividade que interferem no funcionamento e desenvolvimento do indivíduo.
+    description: "Tratamento especializado para Transtorno do Déficit de Atenção e Hiperatividade com abordagem multidisciplinar.",
+    fullDescription: `O TDAH é um transtorno neurobiológico que afeta o desenvolvimento e funcionamento do cérebro, impactando a atenção, o controle de impulsos e a regulação da atividade motora. No Instituto QE+, oferecemos tratamento especializado para TDAH, reconhecendo que cada pessoa apresenta características únicas do transtorno.
 
-No Instituto QE+, oferecemos uma abordagem abrangente para o diagnóstico e tratamento do TDAH, considerando as manifestações específicas do transtorno em cada faixa etária e as necessidades individuais de cada paciente.
+Nossa abordagem multidisciplinar inclui avaliação neuropsicológica, psicoterapia, orientação familiar, e quando necessário, acompanhamento psiquiátrico. O tratamento é personalizado para atender às necessidades específicas de cada paciente, considerando sua idade, sintomas predominantes e contexto de vida.
 
-Nosso tratamento multimodal pode incluir intervenções psicológicas, como terapia cognitivo-comportamental, orientação familiar e escolar, além de acompanhamento médico para avaliação da necessidade de medicação.`,
+Trabalhamos para desenvolver estratégias práticas que ajudem a pessoa a lidar com os desafios do TDAH no dia a dia, melhorando sua qualidade de vida e potencializando suas habilidades.`,
     symptoms: [
-      "Dificuldade para manter a atenção em tarefas",
-      "Desorganização e distração frequente",
-      "Inquietação e hiperatividade",
+      "Dificuldade de manter a atenção em tarefas",
+      "Hiperatividade ou inquietação excessiva",
       "Impulsividade",
-      "Dificuldade para esperar sua vez",
-      "Interromper os outros com frequência",
-      "Problemas para seguir instruções",
-      "Dificuldades acadêmicas ou profissionais"
+      "Dificuldade de organização",
+      "Problemas com gestão do tempo",
+      "Esquecimento frequente",
+      "Dificuldade em seguir instruções",
+      "Tendência a interromper conversas"
     ],
-    whoAffects: "O TDAH pode afetar crianças, adolescentes e adultos. É mais comumente diagnosticado durante a infância, mas muitas pessoas são diagnosticadas apenas na adolescência ou na idade adulta. O transtorno tem forte componente genético e tende a ocorrer em famílias.",
-    image: "/lovable-uploads/45d21c6c-cabe-40c9-82b5-812253682401.png"
+    whoAffects: "O TDAH afeta aproximadamente 5% das crianças e 2,5% dos adultos em todo o mundo. É mais comumente diagnosticado em meninos durante a infância, mas afeta igualmente homens e mulheres na idade adulta. O transtorno pode persistir ao longo da vida, embora os sintomas possam mudar com o desenvolvimento.",
+    image: "/lovable-uploads/TDAH.png"
   },
   "autismo": {
     title: "Autismo",
@@ -70,28 +69,28 @@ Nossa abordagem multidisciplinar integra diversas especialidades como Terapia AB
       "Dificuldade em entender conceitos abstratos ou emoções alheias"
     ],
     whoAffects: "O TEA afeta pessoas de todas as origens étnicas, raciais e socioeconômicas. É mais comumente diagnosticado em meninos do que em meninas, embora pesquisas recentes sugiram que meninas podem ser subdiagnosticadas devido a manifestações diferentes dos sintomas.",
-    image: "/lovable-uploads/fb6e7c8f-4db4-484a-be07-e3e3c60645ea.png"
+    image: "/lovable-uploads/autismo.png"
   },
   "depressao": {
     title: "Depressão",
-    description: "Tratamento integrado e humanizado para transtornos depressivos, com foco na recuperação completa e qualidade de vida.",
-    fullDescription: `A depressão é um transtorno mental caracterizado por tristeza persistente, perda de interesse em atividades que normalmente seriam prazerosas, e incapacidade de realizar atividades diárias, por pelo menos duas semanas.
+    description: "Tratamento especializado para depressão com abordagem multidisciplinar e personalizada.",
+    fullDescription: `A depressão é um transtorno mental que afeta o humor, os pensamentos e o comportamento, podendo interferir significativamente na qualidade de vida. No Instituto QE+, oferecemos tratamento especializado para depressão, reconhecendo que cada pessoa vivencia a doença de maneira única.
 
-No Instituto QE+, abordamos a depressão como uma condição complexa que envolve fatores biológicos, psicológicos e sociais. Nosso tratamento integrado pode incluir psicoterapia, medicação antidepressiva quando necessária, e intervenções complementares como atividade física, mindfulness e terapias de grupo.
+Nossa abordagem multidisciplinar combina psicoterapia, acompanhamento psiquiátrico quando necessário, e estratégias de mudança no estilo de vida. O tratamento é personalizado para atender às necessidades específicas de cada paciente, considerando a gravidade dos sintomas, história pessoal e contexto de vida.
 
-Trabalhamos não apenas para aliviar os sintomas, mas para promover uma recuperação completa e duradoura, ajudando o paciente a desenvolver estratégias de enfrentamento e a reconstruir uma vida significativa e satisfatória.`,
+Trabalhamos para não apenas aliviar os sintomas da depressão, mas também para desenvolver habilidades de enfrentamento e resiliência, promovendo uma recuperação sustentável e melhor qualidade de vida.`,
     symptoms: [
-      "Tristeza persistente ou humor deprimido",
-      "Perda de interesse ou prazer em atividades",
-      "Alterações no apetite ou peso",
-      "Distúrbios do sono",
-      "Fadiga ou perda de energia",
-      "Sentimentos de inutilidade ou culpa excessiva",
-      "Dificuldade para se concentrar",
-      "Pensamentos recorrentes sobre morte ou suicídio"
+      "Tristeza persistente",
+      "Perda de interesse em atividades prazerosas",
+      "Alterações no sono e apetite",
+      "Fadiga e falta de energia",
+      "Sentimentos de culpa ou inutilidade",
+      "Dificuldade de concentração",
+      "Pensamentos de morte ou suicídio",
+      "Irritabilidade ou agitação"
     ],
-    whoAffects: "A depressão pode afetar qualquer pessoa, independentemente de idade, gênero ou condição socioeconômica. Fatores genéticos, bioquímicos, psicológicos e ambientais contribuem para seu desenvolvimento. É mais comum em mulheres e pode ocorrer em diferentes fases da vida, desde a infância até a velhice.",
-    image: "/lovable-uploads/c4a9203f-9e9e-45cb-964f-d482f0084820.png"
+    whoAffects: "A depressão pode afetar pessoas de todas as idades, sendo mais comum em mulheres. Pode se manifestar em diferentes fases da vida e pode estar associada a fatores genéticos, ambientais, psicológicos e biológicos.",
+    image: "/lovable-uploads/depressao.png"
   },
   "transtorno-bipolaridade": {
     title: "Transtorno Bipolaridade",
@@ -112,7 +111,7 @@ Nossa abordagem integra medicação especializada, psicoterapia, educação sobr
       "Ciclagem entre estados de humor"
     ],
     whoAffects: "O Transtorno Bipolar afeta igualmente homens e mulheres, geralmente manifestando-se no final da adolescência ou início da idade adulta. Tem forte componente genético, sendo mais comum em pessoas com familiares que também têm o transtorno.",
-    image: "/lovable-uploads/ec39c136-dd06-4ebd-976f-917b235333c1.png"
+    image: "/lovable-uploads/bipolaridade.png"
   },
   "borderline": {
     title: "Borderline",
@@ -133,49 +132,49 @@ Nosso programa de tratamento pode incluir terapias especializadas como a Terapia
       "Dificuldade em controlar a raiva"
     ],
     whoAffects: "O Transtorno de Personalidade Borderline afeta aproximadamente 1,6% da população geral, sendo mais frequentemente diagnosticado em mulheres. Geralmente começa durante a adolescência ou início da idade adulta. Fatores genéticos e ambientais, como traumas na infância, contribuem para seu desenvolvimento.",
-    image: "/lovable-uploads/c6271fd6-16cc-412f-8baf-72f25de71dec.png"
+    image: "/lovable-uploads/borderline.jpg"
   },
   "esquizofrenia": {
     title: "Esquizofrenia",
-    description: "Tratamento especializado para Esquizofrenia com abordagem multidisciplinar, medicação atualizada e suporte psicossocial.",
-    fullDescription: `A Esquizofrenia é um transtorno mental complexo que afeta a forma como a pessoa pensa, sente e se comporta. Caracteriza-se pela presença de sintomas psicóticos como alucinações e delírios, além de alterações no pensamento, emoções e comportamento.
+    description: "Tratamento especializado para Esquizofrenia com abordagem multidisciplinar e personalizada.",
+    fullDescription: `A Esquizofrenia é um transtorno mental complexo que afeta a forma como uma pessoa pensa, sente e se comporta. Caracteriza-se por uma combinação de sintomas psicóticos, como alucinações e delírios, além de alterações no pensamento e comportamento.
 
-No Instituto QE+, oferecemos um tratamento abrangente para Esquizofrenia, baseado nos mais recentes avanços científicos e protocolos terapêuticos. Nosso objetivo é não apenas controlar os sintomas, mas também promover a reintegração social e melhorar a qualidade de vida dos pacientes.
+No Instituto QE+, oferecemos tratamento especializado para Esquizofrenia, reconhecendo que cada pessoa vivencia a doença de maneira única. Nossa abordagem multidisciplinar integra medicação, psicoterapia, reabilitação psicossocial e suporte familiar.
 
-Nossa abordagem integra tratamento farmacológico com antipsicóticos modernos, intervenções psicossociais, terapia cognitivo-comportamental adaptada para psicose, reabilitação cognitiva, e suporte familiar.`,
+O tratamento visa não apenas controlar os sintomas, mas também promover a recuperação e reintegração social, melhorando a qualidade de vida do paciente e de sua família.`,
     symptoms: [
-      "Delírios (crenças falsas mantidas com convicção)",
-      "Alucinações (especialmente auditivas)",
-      "Discurso e pensamento desorganizados",
-      "Comportamento motor anormal ou catatônico",
-      "Sintomas negativos (diminuição da expressão emocional, apatia)",
-      "Isolamento social",
-      "Déficits cognitivos (memória, atenção, funções executivas)",
-      "Dificuldades em autocuidado e atividades diárias"
+      "Alucinações (ver, ouvir ou sentir coisas que não existem)",
+      "Delírios (crenças falsas e persistentes)",
+      "Pensamento desorganizado",
+      "Comportamento motor anormal",
+      "Sintomas negativos (falta de motivação, expressão emocional reduzida)",
+      "Dificuldade de concentração",
+      "Alterações no sono",
+      "Isolamento social"
     ],
-    whoAffects: "A Esquizofrenia afeta aproximadamente 1% da população mundial. Geralmente se manifesta no final da adolescência ou início da idade adulta, sendo ligeiramente mais precoce em homens do que em mulheres. Tem forte componente genético, embora fatores ambientais também desempenhem papel importante.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    whoAffects: "A Esquizofrenia afeta aproximadamente 1% da população mundial, geralmente manifestando-se no final da adolescência ou início da idade adulta. Afeta igualmente homens e mulheres, embora em homens tenda a começar mais cedo.",
+    image: "/lovable-uploads/esquizofrenia.jpg"
   },
   "tod": {
     title: "TOD",
-    description: "Tratamento especializado para Transtorno Opositivo Desafiador com abordagem multidisciplinar e foco familiar.",
-    fullDescription: `O Transtorno Opositivo Desafiador (TOD) é caracterizado por um padrão persistente de comportamento negativista, hostil e desafiador direcionado a figuras de autoridade, sem violações graves de normas sociais ou direitos alheios.
+    description: "Tratamento especializado para Transtorno Opositivo Desafiador com abordagem multidisciplinar e personalizada.",
+    fullDescription: `O Transtorno Opositivo Desafiador (TOD) é caracterizado por um padrão persistente de comportamento negativista, hostil e desafiador. No Instituto QE+, oferecemos tratamento especializado para TOD, reconhecendo que este transtorno pode afetar significativamente a vida da criança e de sua família.
 
-No Instituto QE+, reconhecemos a complexidade do TOD e seu impacto no funcionamento familiar, escolar e social da criança ou adolescente. Nosso tratamento multidisciplinar é desenvolvido para atender às necessidades específicas de cada paciente e sua família.
+Nossa abordagem multidisciplinar inclui terapia comportamental, orientação familiar, e quando necessário, acompanhamento psiquiátrico. O tratamento é personalizado para atender às necessidades específicas de cada criança e sua família.
 
-Nossa abordagem integra terapia cognitivo-comportamental adaptada para crianças e adolescentes, treinamento parental em habilidades de manejo comportamental, orientação escolar, e quando necessário, avaliação para comorbidades e intervenção medicamentosa.`,
+Trabalhamos para desenvolver estratégias efetivas de manejo comportamental, melhorar a comunicação familiar e promover habilidades sociais e emocionais na criança.`,
     symptoms: [
-      "Temperamento frequentemente irritável",
-      "Comportamento questionador ou desafiante com adultos",
-      "Recusa em seguir regras",
-      "Tendência a provocar ou irritar intencionalmente outras pessoas",
-      "Culpar outros por seus erros ou mau comportamento",
-      "Facilmente irritado pelos outros",
-      "Frequentemente com raiva e ressentido",
-      "Comportamento vingativo"
+      "Acessos de raiva frequentes",
+      "Discussões com adultos",
+      "Desafio ativo às regras",
+      "Comportamento vingativo",
+      "Culpar outros por seus erros",
+      "Irritabilidade fácil",
+      "Comportamento rancoroso",
+      "Dificuldade em aceitar limites"
     ],
-    whoAffects: "O TOD geralmente é diagnosticado na infância, frequentemente tornando-se aparente antes dos 8 anos de idade, embora possa surgir mais tarde. É mais comum em meninos antes da puberdade, mas as taxas se igualam após esse período. Pode coexistir com TDAH, transtornos de ansiedade ou transtornos de humor.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    whoAffects: "O TOD afeta aproximadamente 3-5% das crianças e adolescentes, sendo mais comum em meninos antes da puberdade. Após a puberdade, a prevalência é similar entre meninos e meninas. O transtorno geralmente começa na primeira infância.",
+    image: "/lovable-uploads/tod.png"
   },
   "toc": {
     title: "TOC",
@@ -196,50 +195,49 @@ O tratamento pode incluir Terapia Cognitivo-Comportamental com Exposição e Pre
       "Impacto nas atividades diárias, trabalho, estudo ou relacionamentos"
     ],
     whoAffects: "O TOC afeta cerca de 2-3% da população ao longo da vida. Pode começar na infância, adolescência ou início da idade adulta, com idade média de início aos 19 anos. Afeta igualmente homens e mulheres, embora em meninos tenda a começar mais cedo do que em meninas.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    image: "/lovable-uploads/toc.jpg"
   },
   "transtornos-alimentares": {
     title: "Transtornos Alimentares",
-    description: "Tratamento especializado para Transtornos Alimentares com abordagem multidisciplinar e foco na recuperação completa.",
-    fullDescription: `Os Transtornos Alimentares são condições complexas caracterizadas por comportamentos alimentares perturbados e preocupações excessivas com peso, forma corporal e alimentação, que afetam negativamente a saúde física e o funcionamento psicossocial.
+    description: "Tratamento especializado para Transtornos Alimentares com abordagem multidisciplinar e personalizada.",
+    fullDescription: `Os Transtornos Alimentares são condições complexas que afetam a relação da pessoa com a comida e com seu corpo. No Instituto QE+, oferecemos tratamento especializado para diversos tipos de transtornos alimentares, incluindo Anorexia Nervosa, Bulimia Nervosa e Transtorno de Compulsão Alimentar.
 
-No Instituto QE+, oferecemos um programa abrangente de tratamento para transtornos alimentares como Anorexia Nervosa, Bulimia Nervosa, Transtorno da Compulsão Alimentar e outros transtornos alimentares especificados.
+Nossa abordagem multidisciplinar integra acompanhamento nutricional, psicológico e psiquiátrico, quando necessário. O tratamento é personalizado para atender às necessidades específicas de cada paciente, considerando suas características individuais e o tipo de transtorno.
 
-Nossa abordagem multidisciplinar integra psicoterapia especializada, acompanhamento nutricional, monitoramento médico, e quando necessário, intervenção psiquiátrica. Trabalhamos em estreita colaboração com as famílias, reconhecendo seu papel essencial no processo de recuperação.`,
+Trabalhamos para restaurar uma relação saudável com a comida e com o corpo, além de tratar questões emocionais subjacentes que podem estar contribuindo para o transtorno.`,
     symptoms: [
-      "Restrição severa da ingestão alimentar (Anorexia)",
-      "Episódios de compulsão alimentar (Bulimia, Transtorno da Compulsão Alimentar)",
-      "Comportamentos compensatórios como purgação, exercício excessivo (Bulimia)",
       "Preocupação excessiva com peso e forma corporal",
+      "Restrição alimentar severa",
+      "Episódios de compulsão alimentar",
+      "Comportamentos compensatórios (vômitos, uso de laxantes, exercício excessivo)",
       "Distorção da imagem corporal",
-      "Medo intenso de ganhar peso",
-      "Ritualização em torno da comida",
-      "Isolamento social devido a comportamentos alimentares"
+      "Alterações no peso",
+      "Isolamento social",
+      "Ansiedade relacionada à comida"
     ],
-    whoAffects: "Os Transtornos Alimentares afetam predominantemente adolescentes e adultos jovens, sendo mais comuns em mulheres, embora a incidência em homens esteja aumentando. Fatores biológicos, psicológicos, familiares e socioculturais contribuem para seu desenvolvimento.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    whoAffects: "Os Transtornos Alimentares afetam principalmente adolescentes e adultos jovens, sendo mais comuns em mulheres, embora também afetem homens. Podem estar associados a fatores genéticos, psicológicos, sociais e culturais.",
+    image: "/lovable-uploads/transtornoalimentar.png"
   },
   "neuromodulacao": {
     title: "Neuromodulação",
-    description: "Tratamentos avançados de neuromodulação para diversos transtornos neuropsiquiátricos com tecnologia de ponta e equipe especializada.",
-    fullDescription: `A Neuromodulação no Instituto QE+ engloba técnicas avançadas não-invasivas que utilizam estímulos elétricos ou magnéticos para modular a atividade cerebral, promovendo melhoras em diversos transtornos neuropsiquiátricos.
+    description: "Tratamento especializado com técnicas de Neuromodulação para diversos transtornos neurológicos e psiquiátricos.",
+    fullDescription: `A Neuromodulação é um conjunto de técnicas terapêuticas que visam modificar a atividade neural para tratar diversos transtornos neurológicos e psiquiátricos. No Instituto QE+, oferecemos diferentes modalidades de neuromodulação, incluindo Estimulação Magnética Transcraniana (EMT) e Estimulação Transcraniana por Corrente Contínua (ETCC).
 
-Oferecemos diferentes modalidades de neuromodulação, incluindo Estimulação Magnética Transcraniana (EMT), Estimulação Transcraniana por Corrente Contínua (ETCC) e outros protocolos inovadores, sempre seguindo os mais rigorosos padrões de segurança e eficácia.
+Nossas técnicas de neuromodulação são aplicadas por profissionais altamente qualificados e podem ser utilizadas no tratamento de depressão, ansiedade, TOC, dor crônica e outros transtornos.
 
-Estas técnicas são utilizadas como complemento ao tratamento convencional para condições como depressão resistente, transtorno obsessivo-compulsivo, dor crônica, entre outras, especialmente quando há resposta insatisfatória aos tratamentos tradicionais.`,
+O tratamento é personalizado para cada paciente, considerando suas necessidades específicas e o tipo de transtorno a ser tratado.`,
     symptoms: [
-      "A neuromodulação é um tratamento utilizado para várias condições, incluindo:",
-      "Depressão resistente ao tratamento",
-      "Transtorno Obsessivo-Compulsivo",
+      "Depressão resistente a tratamento",
+      "Ansiedade severa",
+      "TOC",
       "Dor crônica",
-      "Enxaqueca",
-      "Sequelas de AVC",
-      "Fibromialgia",
-      "Transtornos de ansiedade",
-      "Dependência química"
+      "Transtornos do sono",
+      "Dificuldades cognitivas",
+      "Alterações de humor",
+      "Sintomas neurológicos diversos"
     ],
-    whoAffects: "A neuromodulação é indicada para pacientes com transtornos neuropsiquiátricos que não obtiveram resposta satisfatória aos tratamentos convencionais, ou que apresentam efeitos colaterais significativos com medicações. A elegibilidade para estes tratamentos é determinada após avaliação médica especializada.",
-    image: "/lovable-uploads/522c28b0-9259-463e-897a-cd07fa9f4213.png"
+    whoAffects: "A Neuromodulação pode beneficiar pessoas de diferentes idades que apresentam transtornos neurológicos ou psiquiátricos que não responderam adequadamente a outros tratamentos. É especialmente útil para casos de depressão resistente a tratamento.",
+    image: "/lovable-uploads/neuro.png"
   }
 };
 

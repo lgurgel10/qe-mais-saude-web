@@ -14,7 +14,7 @@ const specialtyData: Record<string, SpecialtyData> = {
 Nossos psicólogos são altamente qualificados e trabalham com diversas abordagens terapêuticas, adaptando o tratamento às necessidades específicas de cada pessoa. Atendemos crianças, adolescentes, adultos e idosos, oferecendo suporte para uma ampla gama de questões emocionais e comportamentais.
 
 Nossa abordagem integra diferentes técnicas e metodologias, incluindo terapia cognitivo-comportamental, psicanálise, terapia humanista e outras abordagens baseadas em evidências científicas. Trabalhamos em conjunto com outras especialidades do instituto para oferecer um tratamento multidisciplinar completo.`,
-    image: "/lovable-uploads/7ef31662-90db-4ffc-8504-8211d10ca738.png"
+    image: "/lovable-uploads/psico.png"
   },
   "fonoaudiologia": {
     title: "Fonoaudiologia",
@@ -24,7 +24,7 @@ Nossa abordagem integra diferentes técnicas e metodologias, incluindo terapia c
 Nossos fonoaudiólogos trabalham com uma ampla gama de pacientes, desde crianças com atraso na fala ou transtornos do desenvolvimento até adultos com problemas vocais ou de deglutição.
 
 Utilizamos abordagens terapêuticas baseadas em evidências e personalizadas para cada paciente, com o objetivo de melhorar suas habilidades comunicativas e qualidade de vida.`,
-    image: "/lovable-uploads/60ed31d1-9cb8-42e2-b8d6-96bb13f473fb.png"
+    image: "/lovable-uploads/fono.png"
   },
   "psicanalise": {
     title: "Psicanálise",
@@ -34,7 +34,7 @@ Utilizamos abordagens terapêuticas baseadas em evidências e personalizadas par
 Através da associação livre, análise dos sonhos e da relação transferencial, nossos psicanalistas ajudam os pacientes a identificar conflitos internos não resolvidos e a desenvolver novas formas de lidar com seus problemas emocionais.
 
 Este método terapêutico é especialmente eficaz para quem busca não apenas alívio de sintomas, mas também autoconhecimento profundo e transformação pessoal.`,
-    image: "/lovable-uploads/18c840fa-1072-497a-96db-9b81c39f5cd9.png"
+    image: "/lovable-uploads/psicanalise.png"
   },
   "psiquiatria": {
     title: "Psiquiatria",
@@ -44,17 +44,17 @@ Este método terapêutico é especialmente eficaz para quem busca não apenas al
 Trabalhamos com uma abordagem integrativa que pode incluir psicoterapia, medicação e mudanças no estilo de vida, conforme a necessidade de cada paciente. Nossa equipe está sempre atualizada com os mais recentes avanços da neurociência e psicofarmacologia.
 
 O atendimento psiquiátrico é realizado em um ambiente acolhedor e respeitoso, onde cada paciente é visto de forma holística, considerando não apenas os sintomas, mas também seu contexto de vida, história pessoal e aspirações.`,
-    image: "/lovable-uploads/768f3959-3f22-4e4a-90c9-44f8eb65f29a.png"
+    image: "/lovable-uploads/psiqui.png"
   },
   "terapia-aba": {
     title: "Terapia ABA",
     description: "Análise do Comportamento Aplicada é uma terapia baseada em evidências que ajuda a desenvolver habilidades sociais, comunicativas e adaptativas, especialmente para pessoas com TEA.",
-    fullDescription: `A Terapia ABA (Análise do Comportamento Aplicada) no Instituto QE+ é uma intervenção baseada em evidências científicas, especialmente eficaz para pessoas com Transtorno do Espectro Autista (TEA).
+    fullDescription: `A Terapia ABA (Análise do Comportamento Aplicada) no Instituto QE+ é uma abordagem baseada em evidências científicas que visa desenvolver habilidades sociais, comunicativas e adaptativas, especialmente em pessoas com Transtorno do Espectro Autista (TEA).
 
-Esta abordagem focada e estruturada visa desenvolver habilidades importantes como comunicação, interação social, aprendizado, atenção e comportamentos adaptativos, enquanto reduz comportamentos que possam interferir na aprendizagem e no desenvolvimento.
+Nossos terapeutas ABA são altamente qualificados e trabalham com técnicas específicas para promover o desenvolvimento de comportamentos positivos e reduzir comportamentos que interferem no aprendizado e na socialização.
 
-Nossos terapeutas ABA desenvolvem programas individualizados com metas específicas e mensuráveis, utilizando reforço positivo para motivar a aquisição de novas habilidades. Trabalhamos em estreita colaboração com familiares e outros profissionais para garantir a generalização das habilidades aprendidas em diferentes ambientes.`,
-    image: "/lovable-uploads/770364f2-963d-4af9-93d4-7212813b8a8a.png"
+O tratamento é altamente individualizado, com objetivos claros e mensuráveis, e inclui o treinamento e envolvimento dos pais e cuidadores para garantir a generalização das habilidades aprendidas.`,
+    image: "/lovable-uploads/terapiaaba.png"
   },
   "fisioterapia": {
     title: "Fisioterapia",
@@ -64,7 +64,7 @@ Nossos terapeutas ABA desenvolvem programas individualizados com metas específi
 Utilizamos técnicas e recursos terapêuticos modernos para restaurar, manter e promover a função física ideal, o bem-estar e a qualidade de vida relacionada à saúde.
 
 Atendemos pessoas de todas as idades com diversas condições, desde problemas musculoesqueléticos e lesões esportivas até condições neurológicas como AVC, Parkinson e paralisia cerebral. Nosso objetivo é ajudar cada paciente a alcançar seu máximo potencial funcional e independência.`,
-    image: "/lovable-uploads/63c49ab7-cf78-40c5-8384-bdb002d8064e.png"
+    image: "/lovable-uploads/fisio.png"
   },
   "nutricao": {
     title: "Nutrição",
@@ -74,7 +74,7 @@ Atendemos pessoas de todas as idades com diversas condições, desde problemas m
 Oferecemos avaliação nutricional completa, elaboração de planos alimentares individualizados e acompanhamento contínuo para diversas condições, como transtornos alimentares, alergias e intolerâncias alimentares, obesidade, diabetes, hipertensão e outras condições crônicas.
 
 Acreditamos na importância da relação saudável com a comida e trabalhamos para desmistificar dietas restritivas, promovendo mudanças alimentares sustentáveis e prazerosas que se adaptem ao estilo de vida de cada pessoa.`,
-    image: "/lovable-uploads/0defba2b-9892-42cb-b244-af293c16f393.png"
+    image: "/lovable-uploads/nutri.png"
   },
   "terapia-ocupacional": {
     title: "Terapia Ocupacional",
@@ -84,17 +84,17 @@ Acreditamos na importância da relação saudável com a comida e trabalhamos pa
 Através de avaliações específicas e intervenções personalizadas, ajudamos nossos pacientes a desenvolver, recuperar e melhorar habilidades necessárias para a vida diária, trabalho, estudo e lazer.
 
 Nossa abordagem considera a pessoa como um todo, analisando não apenas suas capacidades e limitações, mas também seus contextos pessoais, familiares e sociais, para desenvolver estratégias e adaptações que promovam uma vida mais funcional e satisfatória.`,
-    image: "/lovable-uploads/ed663827-4eb7-4797-a901-3c242f1f994d.png"
+    image: "/lovable-uploads/terapiaoc.png"
   },
   "pecs": {
     title: "PECS",
     description: "Sistema único de intervenção aumentativa /alternativa na comunicação, destinado geralmente para crianças com perturbação do espectro do autismo.",
-    fullDescription: `O PECS (Sistema de Comunicação por Troca de Figuras) no Instituto QE+ é uma abordagem estruturada e eficaz de comunicação alternativa, especialmente benéfica para pessoas com autismo e outras condições que afetam a comunicação verbal.
+    fullDescription: `O PECS (Picture Exchange Communication System) no Instituto QE+ é um sistema de comunicação alternativa e aumentativa que utiliza imagens para facilitar a comunicação, especialmente em pessoas com Transtorno do Espectro Autista (TEA) ou outras dificuldades de comunicação.
 
-Esta metodologia ensina gradualmente o indivíduo a comunicar-se através da troca de símbolos ou figuras, promovendo a iniciativa comunicativa e a interação social.
+Nossos terapeutas são certificados em PECS e trabalham com uma abordagem estruturada e baseada em evidências para desenvolver habilidades comunicativas. O sistema é especialmente eficaz para pessoas que têm dificuldade com a comunicação verbal.
 
-Nossos especialistas em PECS são certificados e experientes, trabalhando em fases progressivas que vão desde a troca básica de figuras até a construção de frases e comentários espontâneos. O programa é altamente individualizado e envolve a família no processo para garantir a generalização das habilidades aprendidas em todos os ambientes da vida da pessoa.`,
-    image: "/lovable-uploads/7f94496d-8e98-457f-b401-a2b2e3a017a0.png"
+O programa é implementado em fases, começando com a troca de imagens para solicitar itens desejados, progredindo para frases mais complexas e, eventualmente, para comentários espontâneos.`,
+    image: "/lovable-uploads/PECS.png"
   }
 };
 
