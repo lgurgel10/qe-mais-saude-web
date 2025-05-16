@@ -1,22 +1,21 @@
-
 import { Button } from "@/components/ui/button";
 
 const ConsultationSection = () => {
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="bg-qegold-light p-8 md:p-10 rounded-lg shadow-md max-w-4xl mx-auto">
+        <div className="bg-qegold p-8 md:p-10 rounded-lg shadow-md max-w-4xl mx-auto">
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-bold font-playfair text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold font-playfair text-white mb-4">
               Agende uma consulta
             </h2>
-            <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+            <p className="text-white mb-8 max-w-2xl mx-auto">
               Estamos prontos para te ajudar. Entre em contato conosco para marcar sua consulta e
               conheça o Instituto QE+ pessoalmente.
             </p>
             <Button 
               asChild
-              className="bg-qegold hover:bg-qegold-dark text-white font-medium py-3 px-6 rounded-md transition-colors duration-300"
+              className="bg-white hover:bg-gray-100 text-qegold font-medium py-3 px-6 rounded-md transition-colors duration-300"
             >
               <a 
                 href="https://api.whatsapp.com/send?phone=5581940474981" 

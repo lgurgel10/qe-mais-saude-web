@@ -1,4 +1,3 @@
-
 import { Target, Lightbulb, Heart } from "lucide-react";
 
 const PrinciplesSection = () => {
@@ -7,8 +6,9 @@ const PrinciplesSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-playfair text-gray-800 mb-6">
-            Princípios do Instituto
+            Princípios do <span className="text-qegold">Instituto QE+</span>
           </h2>
+          <div className="w-24 h-1 bg-qegold mx-auto mb-6"></div>
           <p className="text-gray-700 text-lg leading-relaxed">
             Atenção e amor pela profissão são qualidades fundamentais da nossa equipe, 
             além da formação e especializações necessárias acreditamos que a ética e o 
@@ -20,7 +20,7 @@ const PrinciplesSection = () => {
           {/* Missão */}
           <div className="bg-qegold rounded-lg p-8 text-center text-white shadow-md">
             <div className="flex justify-center mb-4">
-              <Target className="h-16 w-16 text-white" />
+              <img src="/images/missao.png" alt="Missão" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Missão</h3>
             <p className="text-sm md:text-base">
@@ -31,7 +31,7 @@ const PrinciplesSection = () => {
           {/* Visão */}
           <div className="bg-white rounded-lg p-8 text-center shadow-md">
             <div className="flex justify-center mb-4">
-              <Lightbulb className="h-16 w-16 text-qegold" />
+              <img src="/images/visao.png" alt="Visão" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
             <p className="text-gray-700 text-sm md:text-base">
@@ -42,7 +42,7 @@ const PrinciplesSection = () => {
           {/* Valores */}
           <div className="bg-qegold rounded-lg p-8 text-center text-white shadow-md">
             <div className="flex justify-center mb-4">
-              <Heart className="h-16 w-16 text-white" />
+              <img src="/images/valores.png" alt="Valores" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Valores</h3>
             <ul className="flex flex-col items-center space-y-2">

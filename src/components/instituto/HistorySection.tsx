@@ -1,11 +1,10 @@
-
 import { useState, useEffect } from "react";
 
 const HistorySection = () => {
   const images = [
-    "/lovable-uploads/b7216d08-6ed5-400d-b3f7-2f33073d5065.png",
-    "/lovable-uploads/19aea528-9a31-4578-bd37-266dcd97f8ab.png",
-    "/lovable-uploads/e94cb5a9-4608-4086-b438-f0d733e51a75.png"
+    "/images/conheca1.JPG",
+    "/images/conheca2.JPG",
+    "/images/conheca3.jpg"
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -28,7 +27,7 @@ const HistorySection = () => {
 
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Text Column */}
-          <div className="lg:w-1/2 space-y-6 text-left flex flex-col h-full">
+          <div className="lg:w-1/2 space-y-4 text-left flex flex-col h-full">
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
               O Instituto QE+ é um centro de desenvolvimento humano dedicado à promoção da saúde mental, oferecendo aos pacientes e suas famílias os recursos e métodos mais modernos disponíveis. Nossos diferenciais incluem sofisticação, acolhimento e humanização.
             </p>
@@ -40,15 +39,14 @@ const HistorySection = () => {
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
               O Instituto QE+ foi fundado em 2019, impulsionado pela missão de nossa Diretora, Andrea Lins, Mestra em Psicanálise, Bacharel em Direito, Neuropsicopedagoga e Doutoranda em Teologia, junto com seu marido, o empresário Rogério Lins. Durante 10 anos, eles nutriram o sonho de criar um centro capaz de proporcionar desenvolvimento mental, emocional e profissional.
             </p>
-            
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana serviços de excelência. Incorporamos novas práticas, tecnologias e os profissionais do mercado mantendo-se em constante evolução.
+            O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana serviços de excelência. Incorporamos novas práticas, tecnologias e os profissionais do mercado mantendo-se em constante evolução.
             </p>
           </div>
           
           {/* Carousel Column - Desktop only */}
           <div className="hidden lg:flex lg:w-1/2 items-start h-full">
-            <div className="relative w-full h-full min-h-[430px]">
+            <div className="relative w-full max-w-[400px] aspect-[4/6] mx-auto">
               {images.map((image, index) => (
                 <div
                   key={index}
@@ -59,8 +57,9 @@ const HistorySection = () => {
                   <img
                     src={image}
                     alt={`Instituto QE+ ${index + 1}`}
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                    style={{ objectPosition: 'center' }}
+                    className={`w-full h-full rounded-2xl shadow-lg ${
+                      index === images.length - 1 || index === 2 ? 'object-cover' : 'object-contain'
+                    }`}
                   />
                 </div>
               ))}
@@ -83,7 +82,7 @@ const HistorySection = () => {
         
         {/* Carousel Mobile - below text */}
         <div className="w-full flex flex-col items-center lg:hidden mt-8">
-          <div className="relative w-full max-w-md min-h-[320px]">
+          <div className="relative w-full max-w-[300px] aspect-[4/6]">
             {images.map((image, index) => (
               <div
                 key={index}
@@ -94,8 +93,9 @@ const HistorySection = () => {
                 <img
                   src={image}
                   alt={`Instituto QE+ ${index + 1}`}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  style={{ objectPosition: 'center' }}
+                  className={`w-full h-full rounded-2xl shadow-lg ${
+                    index === images.length - 1 || index === 2 ? 'object-cover' : 'object-contain'
+                  }`}
                 />
               </div>
             ))}
