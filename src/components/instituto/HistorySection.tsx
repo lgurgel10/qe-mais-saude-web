@@ -1,4 +1,6 @@
+
 import { useState, useEffect } from "react";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 const HistorySection = () => {
   const images = [
@@ -56,7 +58,7 @@ const HistorySection = () => {
                   }`}
                 >
                   <img
-                    src={image}
+                    src={normalizeImagePath(image)}
                     alt={`Instituto QE+ ${index + 1}`}
                     className={`w-full h-full rounded-2xl shadow-lg ${
                       index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'
@@ -92,7 +94,7 @@ const HistorySection = () => {
                 }`}
               >
                 <img
-                  src={image}
+                  src={normalizeImagePath(image)}
                   alt={`Instituto QE+ ${index + 1}`}
                   className={`w-full h-full rounded-2xl shadow-lg ${
                     index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import {
   CarouselPrevious,
   CarouselNext
 } from "@/components/ui/carousel";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 export default function FacilitySection() {
   const images = [
@@ -70,7 +72,7 @@ export default function FacilitySection() {
                   }`}
                 >
                   <img
-                    src={image}
+                    src={normalizeImagePath(image)}
                     alt={`Ambiente ${index + 1} QE+`}
                     className="w-full h-full object-cover rounded-2xl shadow-lg"
                     style={{ objectPosition: 'center' }}
@@ -104,7 +106,7 @@ export default function FacilitySection() {
                 }`}
               >
                 <img
-                  src={image}
+                  src={normalizeImagePath(image)}
                   alt={`Ambiente ${index + 1} QE+`}
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                   style={{ objectPosition: 'center' }}

@@ -1,6 +1,8 @@
+
 import { useState, useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,7 +55,7 @@ export default function HeroSection() {
               <div
                 className="w-full h-full"
                 style={{
-                  backgroundImage: `url(${image})`,
+                  backgroundImage: `url(${normalizeImagePath(image)})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   opacity: 0.85,
