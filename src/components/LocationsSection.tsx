@@ -27,7 +27,7 @@ export default function LocationsSection() {
       address: "Av Conselheiro Aguiar, 3600 – Boa Viagem",
       phone: WHATSAPP_DISPLAY,
       images: [
-        "/images/bv1.jpg",
+        "/images/bv1.png",
         "/images/bv2.jpg",
         "/images/bv3.jpg",
         "/images/bv4.jpg",

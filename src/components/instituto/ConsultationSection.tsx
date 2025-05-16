@@ -18,7 +18,7 @@ const ConsultationSection = () => {
               className="bg-white hover:bg-gray-100 text-qegold font-medium py-3 px-6 rounded-md transition-colors duration-300"
             >
               <a 
-                href="https://api.whatsapp.com/send?phone=5581940474981" 
+                href="https://api.whatsapp.com/send?phone=5581982929292" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
