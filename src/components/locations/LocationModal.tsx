@@ -21,7 +21,10 @@ interface LocationModalProps {
 }
 
 export function LocationModal({ location, workHours }: LocationModalProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    draggable: true
+  });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
@@ -53,19 +56,24 @@ export function LocationModal({ location, workHours }: LocationModalProps) {
               <div className="w-full max-w-2xl relative">
                 <div className="w-full aspect-[4/3] rounded-lg overflow-hidden flex items-center justify-center bg-gray-100 relative">
                   <div className="w-full h-full" ref={emblaRef}>
-                    <div className="flex">
+                    <div className="flex h-full">
                       {location.images.map((img, i) => (
-                        <div key={i} className="min-w-0 shrink-0 grow-0 basis-full flex items-center justify-center h-full">
-                          <img src={normalizeImagePath(img)} alt="Foto da unidade" className="w-full h-full object-cover rounded-lg" />
+                        <div key={i} className="min-w-0 flex-[0_0_100%] flex items-center justify-center h-full">
+                          <img 
+                            src={normalizeImagePath(img)} 
+                            alt="Foto da unidade" 
+                            className="w-full h-full object-cover rounded-lg" 
+                          />
                         </div>
                       ))}
                     </div>
                   </div>
-                  {/* Setas */}
+                  
+                  {/* Fixed arrow buttons for better visibility on mobile */}
                   {location.images.length > 1 && (
                     <>
                       <button
-                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 text-white opacity-70 hover:opacity-100 text-2xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
+                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 text-white bg-black/20 hover:bg-black/40 rounded-full w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-200"
                         onClick={e => {
                           e.stopPropagation();
                           emblaApi && emblaApi.scrollPrev();
@@ -76,7 +84,7 @@ export function LocationModal({ location, workHours }: LocationModalProps) {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                       </button>
                       <button
-                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 text-white opacity-70 hover:opacity-100 text-2xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 text-white bg-black/20 hover:bg-black/40 rounded-full w-8 h-8 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-200"
                         onClick={e => {
                           e.stopPropagation();
                           emblaApi && emblaApi.scrollNext();
