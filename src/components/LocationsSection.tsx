@@ -242,7 +242,7 @@ function ModalCarousel({ images }: { images: string[] }) {
               <img
                 src={img}
                 alt="Foto da unidade"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
