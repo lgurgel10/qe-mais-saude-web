@@ -29,8 +29,7 @@ export default function HeroSection() {
   
   // Add Embla Carousel for touch support
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    speed: 10
+    loop: true
   });
 
   useEffect(() => {
