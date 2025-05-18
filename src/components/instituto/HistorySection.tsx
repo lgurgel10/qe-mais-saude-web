@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 const HistorySection = () => {
-  // Use fixed paths to ensure proper loading
   const images = [
     "/images/conheca.png",
     "/images/conheca1.JPG",
@@ -43,7 +43,7 @@ const HistorySection = () => {
               O Instituto QE+ foi fundado em 2019, impulsionado pela missão de nossa Diretora, Andrea Lins, Mestra em Psicanálise, Bacharel em Direito, Neuropsicopedagoga e Doutoranda em Teologia, junto com seu marido, o empresário Rogério Lins. Durante 10 anos, eles nutriram o sonho de criar um centro capaz de proporcionar desenvolvimento mental, emocional e profissional.
             </p>
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana serviços de excelência. Incorporamos novas práticas, tecnologias e os profissionais do mercado mantendo-se em constante evolução.
+            O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana serviços de excelência. Incorporamos novas práticas, tecnologias e os profissionais do mercado mantendo-se em constante evolução.
             </p>
           </div>
           
@@ -58,7 +58,7 @@ const HistorySection = () => {
                   }`}
                 >
                   <img
-                    src={image} // Direct path without normalization
+                    src={normalizeImagePath(image)}
                     alt={`Instituto QE+ ${index + 1}`}
                     className={`w-full h-full rounded-2xl shadow-lg ${
                       index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'
@@ -94,7 +94,7 @@ const HistorySection = () => {
                 }`}
               >
                 <img
-                  src={image} // Direct path without normalization
+                  src={normalizeImagePath(image)}
                   alt={`Instituto QE+ ${index + 1}`}
                   className={`w-full h-full rounded-2xl shadow-lg ${
                     index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'

@@ -8,20 +8,20 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useIsMobile();
   
-  // Desktop images - using raw paths without normalization first
+  // Desktop images
   const desktopImages = [
     "/images/bv1.png",
-    "/images/foto 1.jpg",
-    "/images/foto 2.jpg",
-    "/images/foto 3.jpg",
+    "/images/foto%201.jpg",
+    "/images/foto%202.jpg",
+    "/images/foto%203.jpg",
   ];
   
-  // Mobile images - using raw paths without normalization first
+  // Mobile images
   const mobileImages = [
     "/images/bv1.png",
-    "/images/foto 1 mobile.jpg",
-    "/images/foto 2 mobile.jpg",
-    "/images/foto 3 mobile.jpg"
+    "/images/foto%201%20mobile.jpg",
+    "/images/foto%202%20mobile.jpg",
+    "/images/foto%203%20mobile.jpg"
   ];
   
   // Use appropriate images based on device
@@ -55,7 +55,7 @@ export default function HeroSection() {
               <div
                 className="w-full h-full"
                 style={{
-                  backgroundImage: `url(${image})`, // Using direct path
+                  backgroundImage: `url(${normalizeImagePath(image)})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   opacity: 0.85,

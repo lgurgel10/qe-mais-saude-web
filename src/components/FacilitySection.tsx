@@ -1,8 +1,17 @@
 
 import React, { useState, useEffect } from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
+import { normalizeImagePath } from "@/utils/blogUtils";
 
 export default function FacilitySection() {
-  // Use fixed paths to ensure proper loading
   const images = [
     "/images/foto 5.jpg",
     "/images/foto 4.jpg",
@@ -63,7 +72,7 @@ export default function FacilitySection() {
                   }`}
                 >
                   <img
-                    src={image} // Direct path without normalization
+                    src={normalizeImagePath(image)}
                     alt={`Ambiente ${index + 1} QE+`}
                     className="w-full h-full object-cover rounded-2xl shadow-lg"
                     style={{ objectPosition: 'center' }}
@@ -97,7 +106,7 @@ export default function FacilitySection() {
                 }`}
               >
                 <img
-                  src={image} // Direct path without normalization
+                  src={normalizeImagePath(image)}
                   alt={`Ambiente ${index + 1} QE+`}
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                   style={{ objectPosition: 'center' }}

@@ -13,36 +13,22 @@ export const formatDate = (dateString: string): string => {
 
 // Função para normalizar caminhos de imagem para garantir que funcionem em produção
 export const normalizeImagePath = (url: string): string => {
-  if (!url) return '';
-  
   // Se for uma URL absoluta (http:// ou https://), mantém como está
   if (url.startsWith('http://') || url.startsWith('https://')) {
     return url;
   }
   
-  // Verifica se é um caminho para uma imagem em /lovable-uploads/
-  if (url.includes('lovable-uploads')) {
-    return url.startsWith('/') ? url : `/${url}`;
-  }
-
-  // Para as imagens na pasta /images/, não tenta modificar o caminho
-  if (url.includes('/images/')) {
-    return url;
-  }
-  
   // Se for um caminho relativo sem barra inicial, adiciona a barra
   if (!url.startsWith('/')) {
-    url = `/${url}`;
+    return `/${url}`;
   }
   
-  // Garantir que o caminho esteja corretamente formatado
+  // Caso contrário, retorna o caminho original
   return url;
 };
 
 // Função para verificar se uma URL de imagem está acessível
 export const validateImageUrl = (url: string): boolean => {
-  if (!url) return false;
-  
   // Se a URL começar com /images/ ou /lovable-uploads/, é uma imagem local e válida
   if (url.startsWith('/images/') || url.startsWith('/lovable-uploads/') || 
       url.startsWith('images/') || url.startsWith('lovable-uploads/')) {
