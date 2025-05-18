@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { normalizeImagePath } from "@/utils/blogUtils";
 import useEmblaCarousel from "embla-carousel-react";
@@ -16,12 +15,10 @@ export default function FacilitySection() {
   
   // Add Embla Carousel for touch support
   const [desktopEmblaRef, desktopEmblaApi] = useEmblaCarousel({ 
-    loop: true,
-    draggable: true 
+    loop: true
   });
   const [mobileEmblaRef, mobileEmblaApi] = useEmblaCarousel({ 
-    loop: true,
-    draggable: true 
+    loop: true
   });
 
   useEffect(() => {

@@ -22,8 +22,7 @@ interface LocationModalProps {
 
 export function LocationModal({ location, workHours }: LocationModalProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    draggable: true
+    loop: true
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
 

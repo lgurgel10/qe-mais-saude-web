@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -31,7 +30,6 @@ export default function HeroSection() {
   // Add Embla Carousel for touch support
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    draggable: true,
     speed: 10
   });
 
