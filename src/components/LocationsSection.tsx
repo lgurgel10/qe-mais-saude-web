@@ -245,19 +245,20 @@ function ModalCarousel({ images }: { images: string[] }) {
               <img
                 src={img}
                 alt={`Imagem ${i + 1}`}
-                className="w-full h-full object-cover z-10 pointer-events-none"
-                style={{ position: 'relative' }} // z-10, mas relative, controlada
+                className="w-full h-full object-cover pointer-events-none"
+                style={{ zIndex: 0 }}
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Setas de navegação */}
+      {/* Setas fixas por cima de tudo */}
       {images.length > 1 && (
         <>
           <button
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-black bg-opacity-40 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-60 transition-all duration-200"
+            style={{ zIndex: 1000, position: 'absolute' }}
+            className="left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
             onClick={(e) => {
               e.stopPropagation();
               emblaApi?.scrollPrev();
@@ -266,8 +267,8 @@ function ModalCarousel({ images }: { images: string[] }) {
             type="button"
           >
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -280,7 +281,8 @@ function ModalCarousel({ images }: { images: string[] }) {
           </button>
 
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-black bg-opacity-40 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-60 transition-all duration-200"
+            style={{ zIndex: 1000, position: 'absolute' }}
+            className="right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
             onClick={(e) => {
               e.stopPropagation();
               emblaApi?.scrollNext();
@@ -289,8 +291,8 @@ function ModalCarousel({ images }: { images: string[] }) {
             type="button"
           >
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -306,4 +308,3 @@ function ModalCarousel({ images }: { images: string[] }) {
     </div>
   );
 }
-
