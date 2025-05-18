@@ -219,6 +219,8 @@ export default function LocationsSection() {
   );
 }
 
+
+
 function ModalCarousel({ images }: { images: string[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -237,18 +239,19 @@ function ModalCarousel({ images }: { images: string[] }) {
           {images.map((img, i) => (
             <div
               key={i}
-              className="min-w-0 shrink-0 grow-0 basis-full flex items-center justify-center relative h-full"
+              className="min-w-0 shrink-0 grow-0 basis-full flex items-center justify-center h-full"
             >
               <img
                 src={img}
                 alt="Foto da unidade"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover z-10" // z-10 garante que as imagens fiquem abaixo dos botões
               />
             </div>
           ))}
         </div>
       </div>
 
+      {/* Setas com z-30 garantem que fiquem acima de tudo */}
       {images.length > 1 && (
         <>
           <button
@@ -301,4 +304,3 @@ function ModalCarousel({ images }: { images: string[] }) {
     </div>
   );
 }
-
