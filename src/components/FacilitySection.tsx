@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from "react";
-import { normalizeImagePath } from "@/utils/blogUtils";
 
 export default function FacilitySection() {
   // Use fixed paths to ensure proper loading
@@ -64,7 +63,7 @@ export default function FacilitySection() {
                   }`}
                 >
                   <img
-                    src={normalizeImagePath(image)}
+                    src={image} // Direct path without normalization
                     alt={`Ambiente ${index + 1} QE+`}
                     className="w-full h-full object-cover rounded-2xl shadow-lg"
                     style={{ objectPosition: 'center' }}
@@ -98,7 +97,7 @@ export default function FacilitySection() {
                 }`}
               >
                 <img
-                  src={normalizeImagePath(image)}
+                  src={image} // Direct path without normalization
                   alt={`Ambiente ${index + 1} QE+`}
                   className="w-full h-full object-cover rounded-2xl shadow-lg"
                   style={{ objectPosition: 'center' }}

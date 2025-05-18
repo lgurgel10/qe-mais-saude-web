@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useIsMobile();
   
-  // Desktop images - fixed paths to ensure proper loading
+  // Desktop images - using raw paths without normalization first
   const desktopImages = [
     "/images/bv1.png",
     "/images/foto 1.jpg",
@@ -16,7 +16,7 @@ export default function HeroSection() {
     "/images/foto 3.jpg",
   ];
   
-  // Mobile images - fixed paths
+  // Mobile images - using raw paths without normalization first
   const mobileImages = [
     "/images/bv1.png",
     "/images/foto 1 mobile.jpg",
@@ -55,7 +55,7 @@ export default function HeroSection() {
               <div
                 className="w-full h-full"
                 style={{
-                  backgroundImage: `url(${normalizeImagePath(image)})`,
+                  backgroundImage: `url(${image})`, // Using direct path
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   opacity: 0.85,

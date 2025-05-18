@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from "react";
-import { normalizeImagePath } from "@/utils/blogUtils";
 
 const HistorySection = () => {
   // Use fixed paths to ensure proper loading
@@ -59,7 +58,7 @@ const HistorySection = () => {
                   }`}
                 >
                   <img
-                    src={normalizeImagePath(image)}
+                    src={image} // Direct path without normalization
                     alt={`Instituto QE+ ${index + 1}`}
                     className={`w-full h-full rounded-2xl shadow-lg ${
                       index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'
@@ -95,7 +94,7 @@ const HistorySection = () => {
                 }`}
               >
                 <img
-                  src={normalizeImagePath(image)}
+                  src={image} // Direct path without normalization
                   alt={`Instituto QE+ ${index + 1}`}
                   className={`w-full h-full rounded-2xl shadow-lg ${
                     index === images.length - 1 || index === 2 || index === 0 ? 'object-cover' : 'object-contain'

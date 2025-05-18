@@ -20,16 +20,23 @@ export const normalizeImagePath = (url: string): string => {
     return url;
   }
   
-  // Corrigir caracteres especiais nos nomes de arquivos (espaços, etc.)
-  let formattedUrl = url;
-  
-  // Se for um caminho relativo sem barra inicial, adiciona a barra
-  if (!formattedUrl.startsWith('/')) {
-    formattedUrl = `/${formattedUrl}`;
+  // Verifica se é um caminho para uma imagem em /lovable-uploads/
+  if (url.includes('lovable-uploads')) {
+    return url.startsWith('/') ? url : `/${url}`;
+  }
+
+  // Para as imagens na pasta /images/, não tenta modificar o caminho
+  if (url.includes('/images/')) {
+    return url;
   }
   
-  // Garantir que o caminho esteja corretamente formatado para produção
-  return formattedUrl;
+  // Se for um caminho relativo sem barra inicial, adiciona a barra
+  if (!url.startsWith('/')) {
+    url = `/${url}`;
+  }
+  
+  // Garantir que o caminho esteja corretamente formatado
+  return url;
 };
 
 // Função para verificar se uma URL de imagem está acessível
