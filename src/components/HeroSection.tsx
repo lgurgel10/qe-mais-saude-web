@@ -8,20 +8,20 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useIsMobile();
   
-  // Desktop images
+  // Desktop images - fixed paths to ensure proper loading
   const desktopImages = [
     "/images/bv1.png",
-    "/images/foto%201.jpg",
-    "/images/foto%202.jpg",
-    "/images/foto%203.jpg",
+    "/images/foto 1.jpg",
+    "/images/foto 2.jpg",
+    "/images/foto 3.jpg",
   ];
   
-  // Mobile images
+  // Mobile images - fixed paths
   const mobileImages = [
     "/images/bv1.png",
-    "/images/foto%201%20mobile.jpg",
-    "/images/foto%202%20mobile.jpg",
-    "/images/foto%203%20mobile.jpg"
+    "/images/foto 1 mobile.jpg",
+    "/images/foto 2 mobile.jpg",
+    "/images/foto 3 mobile.jpg"
   ];
   
   // Use appropriate images based on device

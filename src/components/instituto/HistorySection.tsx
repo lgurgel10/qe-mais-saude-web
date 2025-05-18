@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { normalizeImagePath } from "@/utils/blogUtils";
 
 const HistorySection = () => {
+  // Use fixed paths to ensure proper loading
   const images = [
     "/images/conheca.png",
     "/images/conheca1.JPG",
@@ -113,7 +114,7 @@ const HistorySection = () => {
                   }`}
                   aria-label={`Ir para slide ${index + 1}`}
                 />
-              ))}
+              </div>
             </div>
           </div>
         </div>

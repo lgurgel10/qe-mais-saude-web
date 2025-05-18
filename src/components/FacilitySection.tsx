@@ -1,17 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Button } from "@/components/ui/button";
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext
-} from "@/components/ui/carousel";
 import { normalizeImagePath } from "@/utils/blogUtils";
 
 export default function FacilitySection() {
+  // Use fixed paths to ensure proper loading
   const images = [
     "/images/foto 5.jpg",
     "/images/foto 4.jpg",
