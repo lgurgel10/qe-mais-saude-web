@@ -1,6 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+
+import React, { useState, useEffect } from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 import { normalizeImagePath } from "@/utils/blogUtils";
-import useEmblaCarousel from "embla-carousel-react";
 
 export default function FacilitySection() {
   const images = [
@@ -12,50 +21,13 @@ export default function FacilitySection() {
     "/images/foto 9.jpg"
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  // Add Embla Carousel for touch support
-  const [desktopEmblaRef, desktopEmblaApi] = useEmblaCarousel({ 
-    loop: true
-  });
-  const [mobileEmblaRef, mobileEmblaApi] = useEmblaCarousel({ 
-    loop: true
-  });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (desktopEmblaApi) desktopEmblaApi.scrollNext();
-      if (mobileEmblaApi) mobileEmblaApi.scrollNext();
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     }, 4000);
     return () => clearInterval(interval);
-  }, [desktopEmblaApi, mobileEmblaApi]);
-
-  useEffect(() => {
-    if (!desktopEmblaApi) return;
-    
-    const onSelect = () => {
-      setCurrentSlide(desktopEmblaApi.selectedScrollSnap());
-    };
-    
-    desktopEmblaApi.on('select', onSelect);
-    
-    return () => {
-      desktopEmblaApi.off('select', onSelect);
-    };
-  }, [desktopEmblaApi]);
-
-  useEffect(() => {
-    if (!mobileEmblaApi) return;
-    
-    const onSelect = () => {
-      setCurrentSlide(mobileEmblaApi.selectedScrollSnap());
-    };
-    
-    mobileEmblaApi.on('select', onSelect);
-    
-    return () => {
-      mobileEmblaApi.off('select', onSelect);
-    };
-  }, [mobileEmblaApi]);
+  }, [images.length]);
 
   return (
     <section className="py-16 md:py-24 bg-white">
@@ -89,33 +61,30 @@ export default function FacilitySection() {
               zonas de conforto e experimentar novas atividades.
             </p>
           </div>
-          
           {/* Carousel Column - Desktop only */}
           <div className="hidden lg:flex lg:w-1/2 items-start h-full">
-            <div className="relative w-full h-full min-h-[430px] rounded-2xl overflow-hidden" ref={desktopEmblaRef}>
-              <div className="flex h-full">
-                {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className="flex-[0_0_100%] relative w-full h-full min-w-0"
-                  >
-                    <img
-                      src={normalizeImagePath(image)}
-                      alt={`Ambiente ${index + 1} QE+`}
-                      className="w-full h-full object-cover rounded-2xl shadow-lg"
-                    />
-                  </div>
-                ))}
-              </div>
-              
+            <div className="relative w-full h-full min-h-[430px]">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                    index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
+                >
+                  <img
+                    src={normalizeImagePath(image)}
+                    alt={`Ambiente ${index + 1} QE+`}
+                    className="w-full h-full object-cover rounded-2xl shadow-lg"
+                    style={{ objectPosition: 'center' }}
+                  />
+                </div>
+              ))}
               {/* Dots */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
                 {images.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => {
-                      if (desktopEmblaApi) desktopEmblaApi.scrollTo(index);
-                    }}
+                    onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentSlide ? "bg-qegold scale-125" : "bg-white/50 hover:bg-white/75"
                     }`}
@@ -126,33 +95,30 @@ export default function FacilitySection() {
             </div>
           </div>
         </div>
-        
         {/* Carousel Mobile - below text */}
         <div className="w-full flex flex-col items-center lg:hidden mt-8">
-          <div className="relative w-full max-w-md min-h-[320px] rounded-2xl overflow-hidden" ref={mobileEmblaRef}>
-            <div className="flex h-full">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="flex-[0_0_100%] relative w-full h-full min-w-0"
-                >
-                  <img
-                    src={normalizeImagePath(image)}
-                    alt={`Ambiente ${index + 1} QE+`}
-                    className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-            
+          <div className="relative w-full max-w-md min-h-[320px]">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                  index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              >
+                <img
+                  src={normalizeImagePath(image)}
+                  alt={`Ambiente ${index + 1} QE+`}
+                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  style={{ objectPosition: 'center' }}
+                />
+              </div>
+            ))}
             {/* Dots */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
               {images.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    if (mobileEmblaApi) mobileEmblaApi.scrollTo(index);
-                  }}
+                  onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide ? "bg-qegold scale-125" : "bg-white/50 hover:bg-white/75"
                   }`}

@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+
+import { useState, useEffect } from "react";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { normalizeImagePath } from "@/utils/blogUtils";
-import useEmblaCarousel from "embla-carousel-react";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,68 +26,49 @@ export default function HeroSection() {
   
   // Use appropriate images based on device
   const images = isMobile ? mobileImages : desktopImages;
-  
-  // Add Embla Carousel for touch support
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true
-  });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (emblaApi) {
-        emblaApi.scrollNext();
-      }
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    
-    const onSelect = () => {
-      setCurrentSlide(emblaApi.selectedScrollSnap());
-    };
-    
-    emblaApi.on('select', onSelect);
-    
-    return () => {
-      emblaApi.off('select', onSelect);
-    };
-  }, [emblaApi]);
+  }, [images.length]);
 
   return (
     <section className="w-full relative bg-white pt-16">
       <Separator className="w-full bg-border" />
       
-      {/* Slider container with fixed height */}
+      {/* Slider container com altura fixa */}
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
-        {/* Image slides with Embla wrapper */}
-        <div className="relative w-full h-full" ref={emblaRef}>
-          <div className="flex h-full">
-            {images.map((image, index) => (
+        {/* Image slides */}
+        <div className="relative w-full h-full">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                index === currentSlide 
+                  ? "opacity-100 z-10" 
+                  : "opacity-0 z-0"
+              }`}
+            >
               <div
-                key={index}
-                className="relative w-full h-full flex-[0_0_100%] min-w-0"
-              >
-                <div
-                  className="w-full h-full"
-                  style={{
-                    backgroundImage: `url(${normalizeImagePath(image)})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    opacity: 0.85,
-                  }}
-                />
-              </div>
-            ))}
-          </div>
+                className="w-full h-full"
+                style={{
+                  backgroundImage: `url(${normalizeImagePath(image)})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.85,
+                }}
+              />
+            </div>
+          ))}
         </div>
         
-        {/* Dark overlay */}
+        {/* Overlay escuro adicional */}
         <div className="absolute inset-0 bg-black/50 z-20" />
         
-        {/* Content overlay - centered */}
+        {/* Content overlay - centralizado */}
         <div className="absolute inset-0 flex items-center justify-center z-30">
           <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
@@ -107,11 +88,7 @@ export default function HeroSection() {
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => {
-              if (emblaApi) {
-                emblaApi.scrollTo(index);
-              }
-            }}
+            onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? "bg-qegold scale-125" : "bg-white/50 hover:bg-white/75"
             }`}
