@@ -233,7 +233,8 @@ function ModalCarousel({ images }: { images: string[] }) {
   }, [emblaApi]);
 
   return (
-    <div className="w-full flex items-center justify-center rounded-lg overflow-hidden relative h-64 sm:h-80 md:h-96 bg-gray-100">
+    <div className="relative w-full h-64 sm:h-80 md:h-96 bg-gray-100 overflow-hidden rounded-lg">
+      {/* Carrossel */}
       <div className="w-full h-full" ref={emblaRef}>
         <div className="flex h-full">
           {images.map((img, i) => (
@@ -243,29 +244,30 @@ function ModalCarousel({ images }: { images: string[] }) {
             >
               <img
                 src={img}
-                alt="Foto da unidade"
-                className="w-full h-full object-cover z-10" // z-10 garante que as imagens fiquem abaixo dos botões
+                alt={`Imagem ${i + 1}`}
+                className="w-full h-full object-cover z-10 pointer-events-none"
+                style={{ position: 'relative' }} // z-10, mas relative, controlada
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Setas com z-30 garantem que fiquem acima de tudo */}
+      {/* Setas de navegação */}
       {images.length > 1 && (
         <>
           <button
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-60 transition"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-black bg-opacity-40 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-60 transition-all duration-200"
             onClick={(e) => {
               e.stopPropagation();
-              emblaApi && emblaApi.scrollPrev();
+              emblaApi?.scrollPrev();
             }}
             aria-label="Anterior"
             type="button"
           >
             <svg
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -278,17 +280,17 @@ function ModalCarousel({ images }: { images: string[] }) {
           </button>
 
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-black bg-opacity-40 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-60 transition"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-black bg-opacity-40 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-60 transition-all duration-200"
             onClick={(e) => {
               e.stopPropagation();
-              emblaApi && emblaApi.scrollNext();
+              emblaApi?.scrollNext();
             }}
             aria-label="Próximo"
             type="button"
           >
             <svg
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -304,3 +306,4 @@ function ModalCarousel({ images }: { images: string[] }) {
     </div>
   );
 }
+
