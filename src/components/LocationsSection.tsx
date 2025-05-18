@@ -227,9 +227,15 @@ function ModalCarousel({ images }: { images: string[] }) {
 
   React.useEffect(() => {
     if (!emblaApi) return;
-    emblaApi.on("select", () => {
+
+    const onSelect = () => {
       setSelectedIndex(emblaApi.selectedScrollSnap());
-    });
+    };
+
+    emblaApi.on('select', onSelect);
+    onSelect(); // inicializa o índice
+
+    return () => emblaApi.off('select', onSelect);
   }, [emblaApi]);
 
   return (
@@ -246,19 +252,18 @@ function ModalCarousel({ images }: { images: string[] }) {
                 src={img}
                 alt={`Imagem ${i + 1}`}
                 className="w-full h-full object-cover pointer-events-none"
-                style={{ zIndex: 0 }}
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Setas fixas por cima de tudo */}
+      {/* Setas - visíveis somente em md+ */}
       {images.length > 1 && (
         <>
           <button
-            style={{ zIndex: 1000, position: 'absolute' }}
-            className="left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
+            style={{ zIndex: 1000 }}
+            className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-opacity-70 transition"
             onClick={(e) => {
               e.stopPropagation();
               emblaApi?.scrollPrev();
@@ -281,8 +286,8 @@ function ModalCarousel({ images }: { images: string[] }) {
           </button>
 
           <button
-            style={{ zIndex: 1000, position: 'absolute' }}
-            className="right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70 transition"
+            style={{ zIndex: 1000 }}
+            className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-opacity-70 transition"
             onClick={(e) => {
               e.stopPropagation();
               emblaApi?.scrollNext();
@@ -305,6 +310,21 @@ function ModalCarousel({ images }: { images: string[] }) {
           </button>
         </>
       )}
+
+      {/* Indicadores (mobile only) */}
+      {images.length > 1 && (
+        <div className="flex justify-center items-center gap-2 mt-2 md:hidden absolute bottom-2 left-0 right-0">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i === selectedIndex ? 'bg-black' : 'bg-gray-400'
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
+
