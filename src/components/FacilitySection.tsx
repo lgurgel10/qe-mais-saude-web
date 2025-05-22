@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -10,16 +9,34 @@ import {
   CarouselNext
 } from "@/components/ui/carousel";
 import { normalizeImagePath } from "@/utils/blogUtils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function FacilitySection() {
-  const images = [
-    "/images/foto 5.jpg",
+  const isMobile = useIsMobile();
+  
+  // Desktop images
+  const desktopImages = [
+    "/images/musicoterapia.jpg",
     "/images/foto 4.jpg",
     "/images/foto 6.jpg",
     "/images/foto 7.jpg",
     "/images/foto 8.jpg",
     "/images/foto 9.jpg"
   ];
+  
+  // Mobile images
+  const mobileImages = [
+    "/images/musicoterapia.jpg",
+    "/images/foto 4.jpg",
+    "/images/foto 6.jpg",
+    "/images/foto 7.jpg",
+    "/images/foto 8.jpg",
+    "/images/foto 9.jpg"
+  ];
+  
+  // Use appropriate images based on device
+  const images = isMobile ? mobileImages : desktopImages;
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
