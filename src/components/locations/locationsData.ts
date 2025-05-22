@@ -1,4 +1,3 @@
-
 export const WHATSAPP_LINK = "https://wa.me/5581982929292";
 export const WHATSAPP_DISPLAY = "+55 81 98292-9292";
 
