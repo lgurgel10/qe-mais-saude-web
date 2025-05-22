@@ -18,7 +18,7 @@ export default function HeroSection() {
   
   // Mobile images
   const mobileImages = [
-    "/images/bv1.png",
+    "/images/p1.png",
     "/images/foto%201%20mobile.jpg",
     "/images/foto%202%20mobile.jpg",
     "/images/foto%203%20mobile.jpg"
