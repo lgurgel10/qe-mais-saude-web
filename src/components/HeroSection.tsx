@@ -11,7 +11,7 @@ export default function HeroSection() {
   // Desktop images
   const desktopImages = [
     "/images/p1.png",
-    "/images/foto%201.jpg",
+    "/images/salapeixe.jpg",
     "/images/foto%202.jpg",
     "/images/foto%203.jpg",
   ];
@@ -19,7 +19,7 @@ export default function HeroSection() {
   // Mobile images
   const mobileImages = [
     "/images/p1.png",
-    "/images/foto%201%20mobile.jpg",
+    "/images/salapeixemobile.jpg",
     "/images/foto%202%20mobile.jpg",
     "/images/foto%203%20mobile.jpg"
   ];
