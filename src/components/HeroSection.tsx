@@ -72,8 +72,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 flex items-center justify-center z-30">
           <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
-              <span className="text-white">Instituto</span> 
-              <span className="text-qegold"> QE+</span>
+              <span className="text-qegold"> Instituto QE+</span>
             </h1>
             
             <p className="text-white">
