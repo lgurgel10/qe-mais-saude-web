@@ -14,6 +14,7 @@ export default function HeroSection() {
     "/images/salapeixe.jpg",
     "/images/foto%202.jpg",
     "/images/foto%203.jpg",
+    "/images/neuro.jpg"
   ];
   
   // Mobile images
@@ -21,7 +22,8 @@ export default function HeroSection() {
     "/images/p1.png",
     "/images/salapeixemobile.jpg",
     "/images/foto%202%20mobile.jpg",
-    "/images/foto%203%20mobile.jpg"
+    "/images/foto%203%20mobile.jpg",
+    "/images/neuromobile.jpg"
   ];
   
   // Use appropriate images based on device
