@@ -52,7 +52,6 @@ export default function LocationsSection() {
       images: [
         "/images/p1.png",
         "/images/p2.jpg",
-        "/images/p3.jpg",
         "/images/p4.jpg",
         "/images/p5.jpg",
         "/images/p6.jpg"
