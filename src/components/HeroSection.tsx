@@ -10,7 +10,7 @@ export default function HeroSection() {
   
   // Desktop images
   const desktopImages = [
-    "/images/bv1.png",
+    "/images/p1.png",
     "/images/foto%201.jpg",
     "/images/foto%202.jpg",
     "/images/foto%203.jpg",
