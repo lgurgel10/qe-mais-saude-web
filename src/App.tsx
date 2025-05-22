@@ -10,7 +10,6 @@ import SpecialtyPageTemplate from "./components/templates/SpecialtyPageTemplate"
 import TreatmentPageTemplate from "./components/templates/TreatmentPageTemplate";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import PersistentContactBar from "./components/PersistentContactBar";
 
 const queryClient = new QueryClient();
 
@@ -49,7 +48,6 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
-          <PersistentContactBar />
         </div>
       </BrowserRouter>
     </TooltipProvider>
