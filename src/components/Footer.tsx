@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 
 const specialties = [
@@ -11,6 +10,7 @@ const specialties = [
   { name: "Nutrição" },
   { name: "Terapia Ocupacional" },
   { name: "PECS" },
+  { name: "Neuromodulação" }
 ];
 
 function slugify(title: string) {

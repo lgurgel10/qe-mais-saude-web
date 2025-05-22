@@ -95,6 +95,16 @@ Nossos terapeutas são certificados em PECS e trabalham com uma abordagem estrut
 
 O programa é implementado em fases, começando com a troca de imagens para solicitar itens desejados, progredindo para frases mais complexas e, eventualmente, para comentários espontâneos.`,
     image: "/lovable-uploads/PECS.png"
+  },
+  "neuromodulacao": {
+    title: "Neuromodulação",
+    description: "Tratamento especializado com técnicas de Neuromodulação para diversos transtornos neurológicos e psiquiátricos.",
+    fullDescription: `A Neuromodulação é um conjunto de técnicas terapêuticas que visam modificar a atividade neural para tratar diversos transtornos neurológicos e psiquiátricos. No Instituto QE+, oferecemos diferentes modalidades de neuromodulação, incluindo Estimulação Magnética Transcraniana (EMT) e Estimulação Transcraniana por Corrente Contínua (ETCC).
+
+Nossas técnicas de neuromodulação são aplicadas por profissionais altamente qualificados e podem ser utilizadas no tratamento de depressão, ansiedade, TOC, dor crônica e outros transtornos.
+
+O tratamento é personalizado para cada paciente, considerando suas necessidades específicas e o tipo de transtorno a ser tratado.`,
+    image: "/lovable-uploads/neuro.png"
   }
 };
 

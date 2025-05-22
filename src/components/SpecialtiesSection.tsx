@@ -66,6 +66,12 @@ const specialties: Specialty[] = [
     description: "Especialidade médica focada no diagnóstico, tratamento e prevenção de transtornos mentais, oferecendo suporte multidisciplinar para a saúde emocional.",
     image: "/lovable-uploads/psiqui.png"
   },
+  {
+    id: 10,
+    title: "Neuromodulação",
+    description: "Tratamento especializado com técnicas de Neuromodulação para diversos transtornos neurológicos e psiquiátricos.",
+    image: "/lovable-uploads/neuro.png"
+  }
 ];
 
 const SpecialtiesSection = () => {
