@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function PersistentContactBar() {
   return (
-    <div className="bg-qegold-light sticky bottom-0 w-full z-40 py-2 px-4 shadow-md">
+    <div className="bg-qegold sticky bottom-0 w-full z-40 py-2 px-4 shadow-md">
       <div className="container mx-auto flex justify-center">
         <a 
           href="https://wa.me/5581982929292" 
