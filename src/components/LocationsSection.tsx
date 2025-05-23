@@ -19,7 +19,8 @@ const WHATSAPP_DISPLAY = "+55 81 98292-9292";
 const WORK_HOURS = {
   "Boa Viagem": "Segunda à sexta: 8:00 às 20:00 / Sábado: 8:00 às 17:00",
   "Piedade": "Segunda à sexta: 8:00 às 18:00",
-  "Casa Forte": "Segunda à sexta: 8:00 às 20:00"
+  "Casa Forte": "Segunda à sexta: 8:00 às 20:00",
+  "Ribeirão": "Segunda à sexta: 8:00 às 20:00"
 };
 
 export default function LocationsSection() {
@@ -71,6 +72,18 @@ export default function LocationsSection() {
         "/images/cf7.png"
       ],
       maps: "https://www.google.com/maps?q=Av.+Dezessete+de+Agosto,+741,+Recife,+PE"
+    },
+    {
+      name: "Ribeirão",
+      address: "Rua Frutuoso Dias, 80 - Centro - Ribeirão",
+      phone: WHATSAPP_DISPLAY,
+      images: [
+        "/images/r1.jpeg",
+        "/images/r2.png",
+        "/images/r3.png",
+        "/images/r4.png"
+      ],
+      maps: "https://www.google.com/maps?q=Rua+Frutuoso+Dias,+80,+Ribeirão,+PE"
     }
   ];
 
@@ -99,13 +112,13 @@ export default function LocationsSection() {
             a melhor estrutura do estado para um tratamento de ponta em saúde mental.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {locations.map((location, index) => (
             <div 
               key={index}
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col"
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center flex-shrink-0">
+              <div className="relative w-full h-48 overflow-hidden flex items-center justify-center flex-shrink-0">
                 <Carousel
                   className="w-full h-full"
                   setApi={api => { carouselsRef.current[index] = api; }}
@@ -124,28 +137,28 @@ export default function LocationsSection() {
                   </CarouselContent>
                   {/* Chevron SVG arrows, mais visíveis */}
                   <button
-                    className="absolute left-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-3xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
+                    className="absolute left-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-2xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
                     onClick={() => handlePrev(index)}
                     aria-label="Anterior"
                     type="button"
                   >
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                   </button>
                   <button
-                    className="absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-3xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 z-20 text-white opacity-60 hover:opacity-100 text-2xl p-0 m-0 bg-transparent border-none outline-none cursor-pointer transition-all duration-200"
                     onClick={() => handleNext(index)}
                     aria-label="Próximo"
                     type="button"
                   >
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </button>
                 </Carousel>
               </div>
-              <div className="p-6 flex-1 flex flex-col justify-end">
-                <h3 className="text-xl font-bold font-playfair text-qegold mb-2">{location.name}</h3>
-                <p className="text-gray-600 text-sm mb-3">{location.address}</p>
-                <p className="text-gray-800 font-medium mb-4">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-qegold font-bold hover:underline">
+              <div className="p-4 flex-1 flex flex-col justify-end">
+                <h3 className="text-lg font-bold font-playfair text-qegold mb-1">{location.name}</h3>
+                <p className="text-gray-600 text-xs mb-2">{location.address}</p>
+                <p className="text-gray-800 font-medium mb-3">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-qegold font-bold hover:underline text-sm">
                     {location.phone}
                   </a>
                 </p>
@@ -154,7 +167,14 @@ export default function LocationsSection() {
                   setModalCarouselIndex(0);
                 }}>
                   <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full border-qegold text-qegold hover:bg-qegold/10">
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-qegold text-qegold hover:bg-qegold hover:text-white transition-colors duration-300 text-sm py-1"
+                      onClick={() => {
+                        setOpenModal(open ? index : null);
+                        setModalCarouselIndex(0);
+                      }}
+                    >
                       Ver Detalhes
                     </Button>
                   </DialogTrigger>

@@ -10,6 +10,7 @@ import SpecialtyPageTemplate from "./components/templates/SpecialtyPageTemplate"
 import TreatmentPageTemplate from "./components/templates/TreatmentPageTemplate";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
             </Routes>
           </div>
         </div>
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -4,7 +4,8 @@ export const WHATSAPP_DISPLAY = "+55 81 98292-9292";
 export const WORK_HOURS = {
   "Boa Viagem": "Segunda à sexta: 8:00 às 20:00 / Sábado: 8:00 às 17:00",
   "Piedade": "Segunda à sexta: 8:00 às 18:00",
-  "Casa Forte": "Segunda à sexta: 8:00 às 20:00"
+  "Casa Forte": "Segunda à sexta: 8:00 às 20:00",
+  "Ribeirão": "Segunda à sexta: 8:00 às 20:00"
 };
 
 export const locations = [
@@ -53,5 +54,17 @@ export const locations = [
       "/images/cf7.png"
     ],
     maps: "https://www.google.com/maps?q=Av.+Dezessete+de+Agosto,+741,+Recife,+PE"
+  },
+  {
+    name: "Ribeirão",
+    address: "Rua Frutuoso Dias, 80 - Centro - Ribeirão",
+    phone: WHATSAPP_DISPLAY,
+    images: [
+      "/images/r1.jpeg",
+      "/images/r2.png",
+      "/images/r3.png",
+      "/images/r4.png"
+    ],
+    maps: "https://www.google.com/maps?q=Rua+Frutuoso+Dias,+80,+Ribeirão,+PE"
   }
 ];

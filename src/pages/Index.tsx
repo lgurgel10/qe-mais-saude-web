@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -7,7 +6,7 @@ import FacilitySection from "@/components/FacilitySection";
 import LocationsSection from "@/components/LocationsSection";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
 import Footer from "@/components/Footer";
-import PersistentContactBar from "@/components/PersistentContactBar";
+// import PersistentContactBar from "@/components/PersistentContactBar";
 
 const Index = () => {
   useEffect(() => {
@@ -42,7 +41,7 @@ const Index = () => {
         <LocationsSection />
       </main>
       
-      <PersistentContactBar />
+      {/* <PersistentContactBar /> */}
       <Footer />
     </div>
   );
