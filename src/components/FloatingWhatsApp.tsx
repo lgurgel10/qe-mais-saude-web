@@ -4,11 +4,11 @@ export default function FloatingWhatsApp() {
       href="https://wa.me/5581982929292"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-6 z-50 bg-[#25D366] text-white p-6 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 hover:shadow-xl"
+      className="fixed bottom-8 right-6 z-50 bg-[#25D366] text-white p-4 md:p-6 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 hover:shadow-xl"
       aria-label="Fale conosco pelo WhatsApp"
     >
       <svg 
-        className="w-12 h-12" 
+        className="w-8 h-8 md:w-12 md:h-12" 
         fill="currentColor" 
         viewBox="0 0 24 24"
       >
