@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -67,6 +66,7 @@ export default function NavDropdown({ title, items, basePath, isMobile = false }
       <div 
         className={`absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-2 transform transition-all duration-200 origin-top-left z-50
           ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 invisible'}
+          ${title === 'Especialidades' ? 'max-h-[400px] overflow-y-auto' : ''}
         `}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

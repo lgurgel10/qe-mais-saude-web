@@ -21,6 +21,16 @@ export const NAV_ITEMS = {
     "Nutrição",
     "Terapia Ocupacional",
     "PECS",
-    "Neuromodulação"
+    "Neuromodulação",
+    "Psicopedagogia",
+    "Terapia Sistêmica Integrativa",
+    "Musicoterapia",
+    "Terapia de Casal",
+    "Neuropediatria",
+    "Psicomotricidade",
+    "Terapia Em Grupo",
+    "Indian Head",
+    "Reflexologia Podal",
+    "Neuropsicólogo"
   ]
 };

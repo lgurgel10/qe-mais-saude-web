@@ -71,6 +71,66 @@ const specialties: Specialty[] = [
     title: "Neuromodulação",
     description: "Tratamento especializado com técnicas de Neuromodulação para diversos transtornos neurológicos e psiquiátricos.",
     image: "/lovable-uploads/neuro.png"
+  },
+  {
+    id: 11,
+    title: "Psicopedagogia",
+    description: "Especialidade que estuda e intervém no processo de aprendizagem, identificando e tratando dificuldades de aprendizagem.",
+    image: "/images/psicopedagogia.png"
+  },
+  {
+    id: 12,
+    title: "Terapia Sistêmica Integrativa",
+    description: "Abordagem terapêutica que considera o indivíduo em seu contexto familiar e social, promovendo mudanças significativas nos relacionamentos.",
+    image: "/images/terapiasistemica.jpg"
+  },
+  {
+    id: 13,
+    title: "Musicoterapia",
+    description: "Utiliza a música e seus elementos como ferramenta terapêutica para promover saúde física, mental e emocional.",
+    image: "/images/musico-terapia.jpg"
+  },
+  {
+    id: 14,
+    title: "Terapia de Casal",
+    description: "Auxilia casais a melhorar sua comunicação, resolver conflitos e fortalecer o relacionamento através de técnicas especializadas.",
+    image: "/images/terapiacasal.jpg"
+  },
+  {
+    id: 15,
+    title: "Neuropediatria",
+    description: "Especialidade médica focada no desenvolvimento neurológico infantil, diagnóstico e tratamento de distúrbios neurológicos em crianças.",
+    image: "/images/neuropediatria.jpg"
+  },
+  {
+    id: 16,
+    title: "Psicomotricidade",
+    description: "Trabalha a relação entre o desenvolvimento motor e o desenvolvimento cognitivo, emocional e social.",
+    image: "/images/psicomo.jpg"
+  },
+  {
+    id: 17,
+    title: "Terapia Em Grupo",
+    description: "Oferece um espaço terapêutico coletivo onde os participantes podem compartilhar experiências e aprender uns com os outros.",
+    image: "/images/terapiagrupo.webp"
+  },
+  {
+    id: 18,
+    title: "Indian Head",
+    description: "Técnica terapêutica que combina massagem, alongamento e manipulação para aliviar tensões e promover bem-estar.",
+    image: "/images/indianhead.jpg"
+  },
+  {
+    id: 19,
+    title: "Reflexologia Podal",
+    description: "Técnica terapêutica que estimula pontos específicos nos pés para promover equilíbrio e saúde em todo o corpo.",
+    image: "/images/podal.jpg"
+  },
+  {
+    id: 20,
+    title: "Neuropsicólogo",
+    description: "Especialista em avaliar e tratar distúrbios cognitivos, comportamentais e emocionais relacionados ao funcionamento cerebral.",
+    image: "/images/neuropsicologo.jpg"
   }
 ];
 
