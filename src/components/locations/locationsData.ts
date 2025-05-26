@@ -60,10 +60,10 @@ export const locations = [
     address: "Rua Frutuoso Dias, 80 - Centro - Ribeirão",
     phone: WHATSAPP_DISPLAY,
     images: [
-      "/images/r1.jpeg",
+      "/images/r4.png",
       "/images/r2.png",
       "/images/r3.png",
-      "/images/r4.png"
+      "/images/r1.jpeg"
     ],
     maps: "https://www.google.com/maps?q=Rua+Frutuoso+Dias,+80,+Ribeirão,+PE"
   }
