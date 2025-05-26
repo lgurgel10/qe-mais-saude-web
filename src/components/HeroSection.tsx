@@ -7,22 +7,20 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = useIsMobile();
 
-  // Desktop images
   const desktopImages = [
-    "/images/p1.png",
-    "/images/salapeixe.jpg",
-    "/images/foto%202.jpg",
-    "/images/foto%203.jpg",
-    "/images/neuro.jpg"
+    "/images/p1.webp",
+    "/images/salapeixe.webp",
+    "/images/foto2.webp",
+    "/images/foto3.webp",
+    "/images/neuro.webp",
   ];
 
-  // Mobile images
   const mobileImages = [
-    "/images/p1.png",
-    "/images/salapeixemobile.jpg",
-    "/images/foto%202%20mobile.jpg",
-    "/images/foto%203%20mobile.jpg",
-    "/images/neuromobile.jpg"
+    "/images/p1-mobile.webp",
+    "/images/salapeixe-mobile.webp",
+    "/images/foto2-mobile.webp",
+    "/images/foto3-mobile.webp",
+    "/images/neuro-mobile.webp",
   ];
 
   const images = isMobile ? mobileImages : desktopImages;
@@ -38,32 +36,22 @@ export default function HeroSection() {
     <section className="w-full relative bg-white pt-16">
       <Separator className="w-full bg-border" />
 
+      {/* SLIDE ÚNICO visível */}
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
-        {/* Image slides */}
-        <div className="relative w-full h-full">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
-                index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            >
-              <img
-                src={normalizeImagePath(image)}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover opacity-85"
-                loading={index === 0 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "low"}
-              />
-            </div>
-          ))}
-        </div>
+        <img
+          key={currentSlide}
+          src={normalizeImagePath(images[currentSlide])}
+          alt={`Slide ${currentSlide + 1}`}
+          className="w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+          loading={currentSlide === 0 ? "eager" : "lazy"}
+          fetchPriority={currentSlide === 0 ? "high" : "auto"}
+        />
 
-        {/* Overlay escuro adicional */}
-        <div className="absolute inset-0 bg-black/50 z-20" />
+        {/* Escurecimento da imagem */}
+        <div className="absolute inset-0 bg-black/50 z-10" />
 
         {/* Texto central */}
-        <div className="absolute inset-0 flex items-center justify-center z-30">
+        <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="text-center max-w-2xl mx-auto px-4 md:px-6 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
               <span className="text-qegold"> Instituto QE+</span>
@@ -73,22 +61,22 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
-      </div>
 
-      {/* Dots de navegação */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "bg-qegold scale-125"
-                : "bg-white/50 hover:bg-white/75"
-            }`}
-            aria-label={`Ir para slide ${index + 1}`}
-          />
-        ))}
+        {/* Dots de navegação */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? "bg-qegold scale-125"
+                  : "bg-white/50 hover:bg-white/75"
+              }`}
+              aria-label={`Ir para slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
