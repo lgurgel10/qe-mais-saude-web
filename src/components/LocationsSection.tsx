@@ -12,80 +12,12 @@ import {
   DialogClose
 } from "@/components/ui/dialog";
 import useEmblaCarousel from "embla-carousel-react";
-
-const WHATSAPP_LINK = "https://wa.me/5581982929292";
-const WHATSAPP_DISPLAY = "+55 81 98292-9292";
-
-const WORK_HOURS = {
-  "Boa Viagem": "Segunda à sexta: 8:00 às 20:00 / Sábado: 8:00 às 17:00",
-  "Piedade": "Segunda à sexta: 8:00 às 18:00",
-  "Casa Forte": "Segunda à sexta: 8:00 às 20:00",
-  "Ribeirão": "Segunda à sexta: 8:00 às 20:00"
-};
+import { locations, WORK_HOURS, WHATSAPP_LINK, WHATSAPP_DISPLAY } from "./locations/locationsData";
 
 export default function LocationsSection() {
   const carouselsRef = useRef([]);
   const [openModal, setOpenModal] = useState<number | null>(null);
   const [modalCarouselIndex, setModalCarouselIndex] = useState(0);
-  const locations = [
-    {
-      name: "Boa Viagem",
-      address: "Av Conselheiro Aguiar, 3600 – Boa Viagem",
-      phone: WHATSAPP_DISPLAY,
-      images: [
-        "/images/bv1.png",
-        "/images/bv2.jpg",
-        "/images/bv3.jpg",
-        "/images/novabv5.JPG",
-        "/images/bv6.jpg",
-        "/images/bv7.jpg",
-        "/images/bv8.jpg",
-        "/images/bv9.jpg",
-        "/images/bv10.jpg"
-      ],
-      maps: "https://www.google.com/maps?q=Av.+Conselheiro+Aguiar,+3600,+Recife,+PE"
-    },
-    {
-      name: "Piedade",
-      address: "Rua Frei Pio Moreira, 43 - Sala 09 - Piedade",
-      phone: WHATSAPP_DISPLAY,
-      images: [
-        "/images/p1.png",
-        "/images/p2.jpg",
-        "/images/p4.jpg",
-        "/images/p5.jpg",
-        "/images/p6.jpg"
-      ],
-      maps: "https://www.google.com/maps?q=Rua+Frei+Pio+Moreira,+43,+Jaboatão+dos+Guararapes,+PE"
-    },
-    {
-      name: "Casa Forte",
-      address: "Av. Dezessete de Agosto, 741 - Casa Forte",
-      phone: WHATSAPP_DISPLAY,
-      images: [
-        "/images/cf1.png",
-        "/images/cf2.png",
-        "/images/cf3.png",
-        "/images/cf4.png",
-        "/images/cf5.png",
-        "/images/cf6.png",
-        "/images/cf7.png"
-      ],
-      maps: "https://www.google.com/maps?q=Av.+Dezessete+de+Agosto,+741,+Recife,+PE"
-    },
-    {
-      name: "Ribeirão",
-      address: "Rua Frutuoso Dias, 80 - Centro - Ribeirão",
-      phone: WHATSAPP_DISPLAY,
-      images: [
-        "/images/r1.jpeg",
-        "/images/r2.png",
-        "/images/r3.png",
-        "/images/r4.png"
-      ],
-      maps: "https://www.google.com/maps?q=Rua+Frutuoso+Dias,+80,+Ribeirão,+PE"
-    }
-  ];
 
   // Função para controlar o carrossel de cada unidade
   const handlePrev = idx => {
