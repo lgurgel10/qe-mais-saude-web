@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import useEmblaCarousel from "embla-carousel-react";
 import { locations, WORK_HOURS, WHATSAPP_LINK, WHATSAPP_DISPLAY } from "./locations/locationsData";
+import { OptimizedImage } from "./OptimizedImage";
 
 export default function LocationsSection() {
   const carouselsRef = useRef([]);
@@ -59,10 +60,10 @@ export default function LocationsSection() {
                   <CarouselContent>
                     {location.images.map((img, i) => (
                       <CarouselItem key={i} className="w-full h-full aspect-[4/3] flex items-center justify-center">
-                        <img 
+                        <OptimizedImage 
                           src={img} 
                           alt={`Foto da unidade ${location.name}`} 
-                          className="w-full h-full object-cover rounded-none bg-gray-100 aspect-[4/3]" 
+                          className="w-full h-full object-cover rounded-none bg-gray-100 aspect-[4/3]"
                         />
                       </CarouselItem>
                     ))}
@@ -189,7 +190,7 @@ function ModalCarousel({ images }: { images: string[] }) {
               key={i}
               className="min-w-0 shrink-0 grow-0 basis-full flex items-center justify-center relative h-full"
             >
-              <img
+              <OptimizedImage
                 src={img}
                 alt="Foto da unidade"
                 className="w-full h-full object-cover"
@@ -198,7 +199,6 @@ function ModalCarousel({ images }: { images: string[] }) {
           ))}
         </div>
       </div>
-
       {images.length > 1 && (
         <>
           <button
