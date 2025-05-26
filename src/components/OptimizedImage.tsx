@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -6,19 +6,31 @@ interface OptimizedImageProps {
   className?: string;
   width?: number;
   height?: number;
+  priority?: boolean;
 }
 
-export function OptimizedImage({ src, alt, className = '', width, height }: OptimizedImageProps) {
+export function OptimizedImage({ 
+  src, 
+  alt, 
+  className = '', 
+  width, 
+  height,
+  priority = false 
+}: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const [imageSrc, setImageSrc] = useState<string>('');
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
-  const handleError = () => {
-    setError(true);
-  };
+  useEffect(() => {
+    // Preload image
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      setImageSrc(src);
+      setIsLoaded(true);
+    };
+    img.onerror = () => setError(true);
+  }, [src]);
 
   if (error) {
     return (
@@ -36,17 +48,22 @@ export function OptimizedImage({ src, alt, className = '', width, height }: Opti
         </div>
       )}
       <img
-        src={src}
+        src={imageSrc || src}
         alt={alt}
         width={width}
         height={height}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
         decoding="async"
-        onLoad={handleLoad}
-        onError={handleError}
+        fetchPriority={priority ? "high" : "auto"}
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setError(true)}
         className={`transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         } ${className}`}
+        style={{
+          contentVisibility: 'auto',
+          containIntrinsicSize: width && height ? `${width}px ${height}px` : undefined
+        }}
       />
     </div>
   );

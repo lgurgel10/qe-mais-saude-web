@@ -64,6 +64,9 @@ export default function LocationsSection() {
                           src={img} 
                           alt={`Foto da unidade ${location.name}`} 
                           className="w-full h-full object-cover rounded-none bg-gray-100 aspect-[4/3]"
+                          priority={i === 0}
+                          width={800}
+                          height={600}
                         />
                       </CarouselItem>
                     ))}
@@ -194,6 +197,9 @@ function ModalCarousel({ images }: { images: string[] }) {
                 src={img}
                 alt="Foto da unidade"
                 className="w-full h-full object-cover"
+                priority={i === selectedIndex}
+                width={1200}
+                height={900}
               />
             </div>
           ))}
