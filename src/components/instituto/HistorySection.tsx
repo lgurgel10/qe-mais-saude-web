@@ -32,18 +32,19 @@ const HistorySection = () => {
           {/* Text Column */}
           <div className="lg:w-1/2 space-y-4 text-left flex flex-col h-full">
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              O Instituto QE+ é um centro de desenvolvimento humano dedicado à promoção da saúde mental, oferecendo aos pacientes e suas famílias os recursos e métodos mais modernos disponíveis. Nossos diferenciais incluem sofisticação, acolhimento e humanização.
+            O Instituto QE+ é um centro de desenvolvimento humano dedicado à promoção da saúde mental, oferecendo aos pacientes e suas famílias os recursos e métodos mais modernos, utilizando sempre tecnologia de ponta em várias terapias como por exemplo a neuromodulação. 
+            Nossos diferenciais incluem: a sofisticação, o acolhimento e a humanização.
             </p>
             
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Nossa equipe multidisciplinar forma uma estrutura completa que integra um modelo ambulatorial e atendimento domiciliar, com um único propósito: ser uma solução para os desafios enfrentados por você e sua família.
+            Nossa equipe multidisciplinar forma uma estrutura completa que, integra modelo ambulatorial um modelo clínico e atendimento domiciliar, com um único propósito: ser uma A solução para os desafios enfrentados por você e sua família.
             </p>
             
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              O Instituto QE+ foi fundado em 2019, impulsionado pela missão de nossa Diretora, Andrea Lins, Mestra em Psicanálise, Bacharel em Direito, Neuropsicopedagoga e Doutoranda em Teologia, junto com seu marido, o empresário Rogério Lins. Durante 10 anos, eles nutriram o sonho de criar um centro capaz de proporcionar desenvolvimento mental, emocional e profissional.
+            O Instituto QE+ foi fundado em 2019, impulsionado pela missão de nossa Diretora, Andrea Lins, Mestra em Psicanálise, Bacharel em Direito, Neuropsicopedagoga e Doutoranda em Teologia, junto com seu marido, o empresário Rogério Lins. Durante 10 anos, eles nutriram o sonho de criar um centro capaz de proporcionar desenvolvimento mental, emocional e profissional.
             </p>
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-            O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana serviços de excelência. Incorporamos novas práticas, tecnologias e os profissionais do mercado mantendo-se em constante evolução.
+            O compromisso do Instituto QE+ é dar continuidade ao sonho da Dra. Andrea, oferecendo à sociedade pernambucana,  serviços de excelência. Sempre em busca da inovação, incorporamos novas práticas, tecnologias e os melhores profissionais do mercado, mantendo-se em constante evolução.
             </p>
           </div>
           

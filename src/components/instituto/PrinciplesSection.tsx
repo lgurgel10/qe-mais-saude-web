@@ -24,7 +24,7 @@ const PrinciplesSection = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Missão</h3>
             <p className="text-sm md:text-base">
-              Oferecer aos nossos pacientes e seus familiares ferramentas e profissionais capacitados para desenvolver sua capacidade mental e emocional, buscando prepará-lo para enfrentar as dificuldades e aproveitar as oportunidades da vida, fortalecendo nossa relação de confiança e respeito com nossos pacientes e colaboradores.
+            Oferecer aos nossos pacientes e seus familiares, terapias como ferramentas de melhoria e profissionais capacitados para desenvolver a capacidade mental e emocional, buscando prepará-los para enfrentar as dificuldades e aproveitar todas as oportunidades, fortalecendo uma relação de confiança e respeito com nossos pacientes e colaboradores.
             </p>
           </div>
           
@@ -35,7 +35,7 @@ const PrinciplesSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
             <p className="text-gray-700 text-sm md:text-base">
-              Ser reconhecida como referência na estrutura e no tratamento de saúde mental adulto e infantil no Norte e Nordeste. Por este motivo trabalhamos para entregar um serviço de qualidade, por que ser referência significa fazer o melhor para ser o melhor.
+            Ser reconhecida como referência na estrutura e no tratamento de saúde mental adulto e infantil do Norte e Nordeste. Trabalhando com afinco para entregar um serviço de qualidade e excelência.
             </p>
           </div>
           
@@ -47,10 +47,10 @@ const PrinciplesSection = () => {
             <h3 className="text-2xl font-bold mb-4">Valores</h3>
             <ul className="flex flex-col items-center space-y-2">
               <li className="flex items-center">
-                <span className="text-sm md:text-base">• Responsabilidade</span>
+                <span className="text-sm md:text-base">• Ética</span>
               </li>
               <li className="flex items-center">
-                <span className="text-sm md:text-base">• Cuidados com o paciente</span>
+                <span className="text-sm md:text-base">• Acolhimento</span>
               </li>
               <li className="flex items-center">
                 <span className="text-sm md:text-base">• Profissionalismo</span>
@@ -60,6 +60,9 @@ const PrinciplesSection = () => {
               </li>
               <li className="flex items-center">
                 <span className="text-sm md:text-base">• Credibilidade</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm md:text-base">• Responsabilidade</span>
               </li>
             </ul>
           </div>
