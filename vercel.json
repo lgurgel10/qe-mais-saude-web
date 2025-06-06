@@ -1,4 +1,9 @@
 {
+  "version": 2,
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
@@ -17,6 +22,10 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
     },
@@ -40,8 +49,8 @@
     }
   ],
   "images": {
-    "domains": [],
     "minimumCacheTTL": 60,
-    "formats": ["image/webp"]
+    "formats": ["image/webp"],
+    "sizes": [320, 480, 640, 960, 1280, 1920]
   }
 }
