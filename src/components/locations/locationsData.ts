@@ -31,11 +31,11 @@ export const locations = [
     address: "Rua Frei Pio Moreira, 43 - Sala 09 - Piedade",
     phone: WHATSAPP_DISPLAY,
     images: [
-      "/images/p1.png",
-      "/images/p2.jpg",
-      "/images/p4.jpg",
-      "/images/p5.jpg",
-      "/images/p6.jpg"
+      "/images/p1.webp",
+      "/images/p2.webp",
+      "/images/p4.webp",
+      "/images/p5.webp",
+      "/images/p6.webp"
     ],
     maps: "https://www.google.com/maps?q=Rua+Frei+Pio+Moreira,+43,+Jaboatão+dos+Guararapes,+PE"
   },
@@ -44,13 +44,13 @@ export const locations = [
     address: "Av. Dezessete de Agosto, 741 - Casa Forte",
     phone: WHATSAPP_DISPLAY,
     images: [
-      "/images/cf1.png",
-      "/images/cf2.png",
-      "/images/cf3.png",
-      "/images/cf4.png",
-      "/images/cf5.png",
-      "/images/cf6.png",
-      "/images/cf7.png"
+      "/images/cf1.webp",
+      "/images/cf2.webp",
+      "/images/cf3.webp",
+      "/images/cf4.webp",
+      "/images/cf5.webp",
+      "/images/cf6.webp",
+      "/images/cf7.webp"
     ],
     maps: "https://www.google.com/maps?q=Av.+Dezessete+de+Agosto,+741,+Recife,+PE"
   },
@@ -59,10 +59,10 @@ export const locations = [
     address: "Rua Frutuoso Dias, 80 - Centro - Ribeirão",
     phone: WHATSAPP_DISPLAY,
     images: [
-      "/images/r4.png",
-      "/images/r2.png",
-      "/images/r3.png",
-      "/images/r1.jpeg"
+      "/images/r4.webp",
+      "/images/r2.webp",
+      "/images/r3.webp",
+      "/images/r1.webp"
     ],
     maps: "https://www.google.com/maps?q=Rua+Frutuoso+Dias,+80,+Ribeirão,+PE"
   }
