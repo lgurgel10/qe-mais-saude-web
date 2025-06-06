@@ -20,7 +20,7 @@ export default function HeroSection() {
         "/images/salapeixe.webp",
         "/images/foto 2.webp",
         "/images/foto 3.webp",
-        "/images/neuro.webp",
+        "/images/neuromobile.webp",
       ];
 
   // Preload next image
