@@ -13,7 +13,7 @@ export default function HeroSection() {
         "/images/salapeixemobile.jpg",
         "/images/foto 2 mobile.jpg",
         "/images/foto 3 mobile.jpg",
-        "/images/neuromobile.jpg",
+        "/images/neuromobile.webp",
       ]
     : [
         "/images/p1.png",
