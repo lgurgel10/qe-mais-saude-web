@@ -9,18 +9,18 @@ export default function HeroSection() {
 
   const images = isMobile
     ? [
-        "/images/p1.png",
-        "/images/salapeixemobile.jpg",
-        "/images/foto 2 mobile.jpg",
-        "/images/foto 3 mobile.jpg",
+        "/images/p1.webp",
+        "/images/salapeixemobile.webp",
+        "/images/foto 2 mobile.webp",
+        "/images/foto 3 mobile.webp",
         "/images/neuromobile.webp",
       ]
     : [
-        "/images/p1.png",
-        "/images/salapeixe.jpg",
-        "/images/foto 2.jpg",
-        "/images/foto 3.jpg",
-        "/images/neuro.jpg",
+        "/images/p1.webp",
+        "/images/salapeixe.webp",
+        "/images/foto 2.webp",
+        "/images/foto 3.webp",
+        "/images/neuro.webp",
       ];
 
   // Preload next image
