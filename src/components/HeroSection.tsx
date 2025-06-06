@@ -8,19 +8,19 @@ export default function HeroSection() {
   const isMobile = useIsMobile();
 
   const desktopImages = [
-    "/images/p1.webp",
-    "/images/salapeixe.webp",
-    "/images/foto2.webp",
-    "/images/foto3.webp",
-    "/images/neuro.webp",
+    "/images/p1.png",
+    "/images/salapeixe.jpg",
+    "/images/foto 2.jpg",
+    "/images/foto 3.jpg",
+    "/images/neuro.jpg",
   ];
 
   const mobileImages = [
-    "/images/p1-mobile.webp",
-    "/images/salapeixe-mobile.webp",
-    "/images/foto2-mobile.webp",
-    "/images/foto3-mobile.webp",
-    "/images/neuro-mobile.webp",
+    "/images/p1.png",
+    "/images/salapeixemobile.jpg",
+    "/images/foto 2 mobile.jpg",
+    "/images/foto 3 mobile.jpg",
+    "/images/neuromobile.jpg",
   ];
 
   const images = isMobile ? mobileImages : desktopImages;
@@ -28,7 +28,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 5000); // Troca a cada 5 segundos
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -38,13 +38,15 @@ export default function HeroSection() {
 
       {/* SLIDE ÚNICO visível */}
       <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+        
+        {/* Primeira imagem com prioridade de carregamento */}
         <img
           key={currentSlide}
           src={normalizeImagePath(images[currentSlide])}
           alt={`Slide ${currentSlide + 1}`}
           className="w-full h-full object-cover transition-opacity duration-700 ease-in-out"
-          loading={currentSlide === 0 ? "eager" : "lazy"}
-          fetchPriority={currentSlide === 0 ? "high" : "auto"}
+          loading={currentSlide === 0 ? "eager" : "lazy"} // A primeira imagem é carregada imediatamente, as outras são carregadas de forma preguiçosa
+          fetchPriority={currentSlide === 0 ? "high" : "auto"} // Imagem principal com prioridade alta
         />
 
         {/* Escurecimento da imagem */}
