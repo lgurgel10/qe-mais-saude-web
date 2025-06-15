@@ -16,22 +16,22 @@ export default function FacilitySection() {
   
   // Desktop images
   const desktopImages = [
-    "/images/musicoterapia.jpg",
-    "/images/foto 4.jpg",
-    "/images/foto 6.jpg",
-    "/images/foto 7.jpg",
+    "/images/musicoterapia.webp",
+    "/images/foto 4.webp",
+    "/images/foto 6.webp",
+    "/images/foto 7.webp",
     "/images/foto 8.jpg",
-    "/images/foto 9.jpg"
+    "/images/foto 9.webp"
   ];
   
   // Mobile images
   const mobileImages = [
-    "/images/musicoterapia.jpg",
-    "/images/foto 4.jpg",
-    "/images/foto 6.jpg",
-    "/images/foto 7.jpg",
+    "/images/musicoterapia.webp",
+    "/images/foto 4.webp",
+    "/images/foto 6.webp",
+    "/images/foto 7.webp",
     "/images/foto 8.jpg",
-    "/images/foto 9.jpg"
+    "/images/foto 9.webp"
   ];
   
   // Use appropriate images based on device
