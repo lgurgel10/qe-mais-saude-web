@@ -17,11 +17,11 @@ export const locations = [
       "/images/bv1.png",
       "/images/bv2.jpg",
       "/images/bv3.jpg",
-      "/images/novabv5.JPG",
+      "/images/novabv5.webp",
       "/images/bv6.jpg",
       "/images/bv7.jpg",
       "/images/bv8.jpg",
-      "/images/bv9.jpg",
+      "/images/bv9.webp",
       "/images/bv10.jpg"
     ],
     maps: "https://www.google.com/maps?q=Av.+Conselheiro+Aguiar,+3600,+Recife,+PE"
@@ -45,11 +45,8 @@ export const locations = [
     phone: WHATSAPP_DISPLAY,
     images: [
       "/images/cf1.webp",
-      "/images/cf2.webp",
-      "/images/cf3.webp",
       "/images/cf4.webp",
       "/images/cf5.webp",
-      "/images/cf6.webp",
       "/images/cf7.webp"
     ],
     maps: "https://www.google.com/maps?q=Av.+Dezessete+de+Agosto,+741,+Recife,+PE"
