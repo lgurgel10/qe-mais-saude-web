@@ -114,7 +114,7 @@ O tratamento é personalizado para cada paciente, considerando suas necessidades
 Através de avaliações específicas e intervenções personalizadas, identificamos as causas das dificuldades de aprendizagem e desenvolvemos estratégias para superá-las. Trabalhamos com diversos aspectos como atenção, memória, raciocínio lógico, leitura, escrita e matemática.
 
 Nossa abordagem considera não apenas as dificuldades acadêmicas, mas também os aspectos emocionais, sociais e familiares que podem estar influenciando o processo de aprendizagem.`,
-    image: "/images/psicopedagogia.png"
+    image: "/images/psicopedagogia.webp"
   },
   "terapia-sistemica-integrativa": {
     title: "Terapia Sistêmica Integrativa",
@@ -164,7 +164,7 @@ Nossa abordagem é multidisciplinar, trabalhando em conjunto com outras especial
 Nossos psicomotricistas utilizam atividades motoras e jogos para desenvolver habilidades como coordenação, equilíbrio, lateralidade, orientação espacial e temporal. Estas habilidades são fundamentais para o desenvolvimento global da pessoa.
 
 A psicomotricidade pode ajudar no tratamento de diversas condições, incluindo atrasos no desenvolvimento motor, dificuldades de aprendizagem, TDAH, autismo e outros transtornos do desenvolvimento.`,
-    image: "/images/psicomo.jpg"
+    image: "/images/psicomo.webp"
   },
   "terapia-em-grupo": {
     title: "Terapia Em Grupo",
