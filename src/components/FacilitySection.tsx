@@ -58,22 +58,12 @@ export default function FacilitySection() {
           {/* Text Column */}
           <div className="lg:w-1/2 space-y-6 text-left flex flex-col h-full">
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Com 4 unidades em Boa Viagem, Piedade, Casa Forte e Ribeirão, o Instituto QE+ 
-              oferece a melhor estrutura do estado para um tratamento de ponta em saúde mental. 
-              Contamos com uma equipe de profissionais altamente qualificados e oferecemos 
-              atendimento personalizado para tratar uma ampla gama de condições, desde ansiedade 
-              e depressão até transtornos de comportamento e estresse. Nossos serviços incluem 
-              terapia individual e em grupo, avaliação psicológica e acompanhamento psiquiátrico, 
-              todos baseados em abordagens modernas e eficazes, visando melhorar a qualidade de 
-              vida e a interação social.
+            Com 4 unidades em Boa Viagem, Piedade, Casa Forte e Ribeirão, o Instituto QE+ é o maior centro de neuromodulação cerebral do Nordeste, oferecendo a melhor estrutura do estado para um tratamento de ponta em saúde mental. A neuromodulação cerebral é a base de nosso tratamento, sendo uma abordagem inovadora e eficaz para o tratamento de diversas condições, como ansiedade, depressão, transtornos de comportamento, estresse e autismo. Nossa equipe de profissionais altamente qualificados utiliza essa tecnologia para otimizar o bem-estar dos pacientes, promovendo uma melhora significativa na qualidade de vida e na interação social.
+
             </p>
             
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Além disso, oferecemos uma excelente oportunidade para crianças com necessidades 
-              especiais desenvolverem suas habilidades sociais. Nossa estrutura é comparável a 
-              um ambiente escolar, permitindo que as crianças se relacionem de maneira igualitária, 
-              sempre acompanhadas por uma equipe de apoio treinada para auxiliá-las a sair de suas 
-              zonas de conforto e experimentar novas atividades.
+            Além disso, oferecemos um atendimento personalizado, que inclui terapia individual e em grupo, avaliação psicológica e acompanhamento psiquiátrico. Nossa estrutura de alto padrão também proporciona uma excelente oportunidade para crianças com necessidades especiais, incluindo aquelas com o Transtorno do Espectro Autista (TEA), desenvolverem suas habilidades sociais. O ambiente de nossa unidade é projetado para atender com excelência, permitindo que nossos pacientes tenham a melhor estrutura de estímulo e atendimento de todas as suas demandas.
             </p>
           </div>
           {/* Carousel Column - Desktop only */}
