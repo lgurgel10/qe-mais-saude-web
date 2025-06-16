@@ -18,7 +18,6 @@ export const locations = [
       "/images/bv2.jpg",
       "/images/bv3.jpg",
       "/images/novabv5.webp",
-      "/images/bv6.jpg",
       "/images/bv7.jpg",
       "/images/bv8.jpg",
       "/images/bv9.webp",
