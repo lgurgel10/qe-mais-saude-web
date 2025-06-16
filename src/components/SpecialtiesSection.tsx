@@ -100,7 +100,7 @@ const specialties: Specialty[] = [
     id: 15,
     title: "Neuropediatria",
     description: "Especialidade médica focada no desenvolvimento neurológico infantil, diagnóstico e tratamento de distúrbios neurológicos em crianças.",
-    image: "/images/neuropediatria.jpg"
+    image: "/images/neuropediatria.webp"
   },
   {
     id: 16,

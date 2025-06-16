@@ -154,7 +154,7 @@ Nossa abordagem é personalizada para atender às necessidades específicas de c
 Atendemos crianças com diversas condições neurológicas, incluindo atrasos no desenvolvimento, transtornos de aprendizagem, TDAH, autismo, epilepsia e outras condições neurológicas. O diagnóstico precoce e o tratamento adequado são fundamentais para o melhor desenvolvimento da criança.
 
 Nossa abordagem é multidisciplinar, trabalhando em conjunto com outras especialidades como psicologia, fonoaudiologia e terapia ocupacional para oferecer um tratamento completo e integrado.`,
-    image: "/images/neuropediatria.jpg"
+    image: "/images/neuropediatria.webp"
   },
   "psicomotricidade": {
     title: "Psicomotricidade",
