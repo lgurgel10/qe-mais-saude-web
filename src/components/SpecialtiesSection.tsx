@@ -76,7 +76,7 @@ const specialties: Specialty[] = [
     id: 11,
     title: "Psicopedagogia",
     description: "Especialidade que estuda e intervém no processo de aprendizagem, identificando e tratando dificuldades de aprendizagem.",
-    image: "/images/psicopedagogia.png"
+    image: "/images/psicopedagogia.webp"
   },
   {
     id: 12,
@@ -106,7 +106,7 @@ const specialties: Specialty[] = [
     id: 16,
     title: "Psicomotricidade",
     description: "Trabalha a relação entre o desenvolvimento motor e o desenvolvimento cognitivo, emocional e social.",
-    image: "/images/psicomo.jpg"
+    image: "/images/psicomo.webp"
   },
   {
     id: 17,
